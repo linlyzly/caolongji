@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>草龙记 · 卷尾题跋</title>
+<link rel="stylesheet" href="../css/p13.css?v=2026102045">
+</head><body>
+
+<div id="stage">
+
+<!-- 开场黑屏 -->
+<div class="intro-screen" id="introScreen">
+  <div class="intro-seal"><img src="../img/stamp.png" alt=""></div>
+  <div class="intro-title">你不是在等雨，你是在长鳞</div>
+  <div class="intro-sub">等雨的人，都是龙的一部分</div>
+</div>
+
+<!-- 主页面 -->
+<div class="main-page" id="mainPage">
+  <div class="edge-left"></div>
+  <div class="edge-right"></div>
+  <div class="edge-top"></div>
+  <div class="edge-bottom"></div>
+
+  <div class="bg-scene" id="bgScene">
+    <img class="bg-img" id="bgImg" src="../img/p13_36.jpg" alt="">
+  </div>
+  <div class="glow-orb"></div>
+  <div class="glow-orb lt"></div>
+  <div class="vignette"></div>
+
+  <div class="foreground">
+    <div class="topbar-row"><span><i class="bar"></i>鄱阳湖绿色非遗会展季 · 2026</span></div>
+    <div class="top-row">
+      <div class="seal-stamp" id="mainSeal"><img src="../img/stamp.png" alt=""></div>
+      <div class="title-block" id="titleBlock">
+        <div class="main-title">卷尾 · 题跋</div>
+        <div class="title-rule"></div>
+        <div class="sub-title">手卷的题跋，留给后来的人</div>
+      </div>
+    </div>
+
+    <div class="mid-area">
+      <div class="info-card" id="infoCard">
+        <button class="card-close" id="cardClose" aria-label="收起">×</button>
+        <div class="ch-head">
+          <div class="ch-seal" id="chSeal"><img src="../img/stamp.png" alt=""></div>
+          <div class="ch-stage" id="chStage">起</div>
+        </div>
+        <div class="ch-main" id="chMain">田里的一把草</div>
+        <div class="ch-body" id="chBody">每个普通人的来处，都从一把最寻常的秸秆开始。</div>
+      </div>
+      <div class="right-quote" id="rightQuote">后来的手 · 续写成龙</div>
+    </div>
+
+    <div class="bottom-area" id="bottomArea">
+      <div class="notes-strip" id="notesStrip">
+        <span class="notes-empty" id="emptyTip">尚无来者题跋，落笔即是第一人。</span>
+      </div>
+      <div class="anchor-row" id="anchorRow"></div>
+      <div class="sign-row">
+        <div>
+          <div class="sign-left">草成器，器归田</div>
+          <div class="sign-right">—— 写给每个等雨的普通人</div>
+        </div>
+        <button class="checkin-btn" id="checkinBtn">当下是草，来日是龙</button>
+      </div>
+      <div class="credit-line" id="creditLine">插画由 AI 生成 · 实拍图片与音频来源见右下「源」印</div>
+    </div>
+  </div>
+</div>
+
+<!-- 书写弹窗 -->
+<div class="checkin-overlay" id="checkinOverlay">
+  <div class="checkin-card">
+    <span class="card-topline"></span>
+    <button class="close-btn" id="closeBtn">×</button>
+    <div class="card-seal"><img src="../img/stamp.png" alt=""></div>
+    <div class="write-phase" id="writePhase">
+      <div class="card-top-seal"><img src="../img/stamp.png" alt=""></div>
+      <div class="write-title">写下你正在等的那场雨</div>
+      <div class="write-sub">落成这一卷的题跋 · 你写一句，龙鳞就长一片</div>
+      <textarea class="write-input" id="writeInput" placeholder="例：今年的稻浪，替我等到来年……"></textarea>
+      <div class="preset-row">
+        <button class="preset-btn" data-t="今年的稻浪，替我等到来年">一键填入</button>
+        <button class="preset-btn" data-t="雨还没来，鳞先长了">换一句</button>
+      </div>
+      <button class="write-submit" id="writeSubmit">落 笔 成 跋</button>
+    </div>
+    <div class="write-ok" id="writeOk">
+      <div class="ok-big">当下是草，来日是龙</div>
+      <div class="ok-my-text" id="okMyText"></div>
+      <div class="ok-label">龙 在 听 · 安 慰 话 术</div>
+      <div class="ok-advice" id="okAdvice"></div>
+      <button class="share-btn" id="shareBtn">生成分享卡片</button>
+    </div>
+  </div>
+</div>
+
+<!-- 分享卡片弹层 -->
+<div class="share-overlay" id="shareOverlay">
+  <div class="share-panel">
+    <div class="share-title-row">
+      <div class="share-title">草龙记 · 题跋分享卡</div>
+      <button class="share-close" id="shareClose">×</button>
+    </div>
+    <div class="share-canvas-wrap">
+      <canvas id="shareCanvas" width="780" height="1120"></canvas>
+    </div>
+    <div class="share-actions">
+      <button class="share-action save" id="shareSave">保存图片</button>
+      <button class="share-action copy" id="shareCopy">复制文案</button>
+    </div>
+    <div class="share-tip">保存到相册 · 分享给下一个正在长鳞的人</div>
+  </div>
+</div>
+
+
+</div><!-- /#stage -->
+
+<script src="../js/p13.js?v=2026102045"></script>
+<script src="../js/bridge.js?v=2026102045"></script>
+</body></html>

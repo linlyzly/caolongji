@@ -1,0 +1,138 @@
+
+@font-face{font-family:'BrushKai';src:url(data:font/woff2;base64,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) format('woff2');font-display:swap}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{background:#3a2a1c;overflow:hidden;-webkit-tap-highlight-color:transparent}
+.page{position:relative;width:min(390px,100%);height:100dvh;margin:0 auto;overflow:hidden;background:#2a1c10}
+
+.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;
+  opacity:0;transition:opacity 1.1s ease;will-change:opacity}
+.bg.show{opacity:1}
+.bg.out{opacity:0}
+.b-before{opacity:1}
+.veil{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,
+    rgba(252,244,230,.94) 0%,rgba(252,244,230,.6) 7%,rgba(252,244,230,.2) 15%,rgba(252,244,230,.05) 22%,
+    rgba(252,244,230,0) 30%,rgba(252,244,230,0) 76%,
+    rgba(249,241,225,.35) 84%,rgba(247,238,220,.62) 91%,rgba(245,235,216,.82) 97%,rgba(244,233,213,.92) 100%)}
+/* 光影三件套（无火焰图片版） */
+.glowambient{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:0;
+  background:radial-gradient(ellipse 90% 62% at 50% 60%,rgba(255,130,45,.2),rgba(255,90,30,.08) 55%,transparent 80%);
+  transition:opacity 2s ease}
+.glowambient.on{opacity:1;animation:ambbreathe 4.8s ease-in-out infinite}
+@keyframes ambbreathe{0%,100%{opacity:.8}50%{opacity:1}}
+.fireglow{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:0;
+  background:radial-gradient(ellipse 58% 42% at 50% 68%,rgba(255,120,30,.52),rgba(210,60,20,.26) 55%,transparent 82%);
+  transition:opacity 1.6s ease}
+.fireglow.on{opacity:1;animation:glowbreathe 3.4s ease-in-out infinite}
+.fireglow.dim{opacity:0;transition:opacity 3.6s ease;animation:none}
+@keyframes glowbreathe{0%,100%{opacity:.82}50%{opacity:1}}
+.glowground{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:0;
+  background:radial-gradient(ellipse 80% 34% at 50% 78%,rgba(255,150,70,.3),rgba(190,70,28,.12) 55%,transparent 80%);
+  transition:opacity 1.8s ease}
+.glowground.on{opacity:1;animation:groundbreathe 4.2s ease-in-out infinite}
+@keyframes groundbreathe{0%,100%{opacity:.75}50%{opacity:.95}}
+#fx{position:absolute;inset:0;width:100%;height:100%;z-index:4;pointer-events:none}
+
+.head{position:absolute;left:7%;top:11%;z-index:5;pointer-events:none;opacity:0;
+  animation:fadeup 1s cubic-bezier(.16,1,.3,1) .15s both}
+.topbar{font-size:.56rem;font-weight:700;letter-spacing:.14em;text-indent:.14em;
+  color:#3a3229;text-shadow:0 1px 6px rgba(253,247,232,.85)}
+.topbar .bar{display:inline-block;width:2px;height:.82em;background:#c8452f;margin-right:.55em;vertical-align:-.06em;
+  animation:p11BarPulse 2.6s ease-in-out infinite}
+@keyframes p11BarPulse{0%,100%{opacity:1}50%{opacity:.45}}
+.seal{position:absolute;right:7%;top:10.2%;z-index:5;width:1.9rem;height:1.9rem;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;background:#c8452f;border-radius:1px;color:#fdf3e2;
+  font-size:.56rem;line-height:1.04;box-shadow:0 1px 5px rgba(60,40,20,.32);opacity:0;
+  animation:sealpop .7s cubic-bezier(.2,1.4,.3,1) .5s both}
+@keyframes sealpop{from{opacity:0;transform:scale(.6) rotate(-8deg)}to{opacity:1;transform:scale(1) rotate(0)}}
+.title{font-family:'BrushKai','KaiTi',serif;font-weight:700;font-size:clamp(2rem,6vh,2.4rem);
+  color:#201a12;letter-spacing:.16em;text-indent:.16em;line-height:1.12;text-shadow:0 2px 14px rgba(253,247,232,.95);
+  animation:p11Float 7s ease-in-out infinite}
+@keyframes p11Float{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+.head .sub{font-family:'BrushKai','KaiTi',serif;font-size:clamp(.78rem,2.2vh,.9rem);margin-top:.55em;
+  color:#241f18;letter-spacing:.05em;text-shadow:0 1px 10px rgba(253,247,232,.9)}
+
+.guide{position:absolute;left:0;right:0;top:56%;z-index:5;text-align:center;font-size:.64rem;font-weight:700;
+  letter-spacing:.3em;text-indent:.3em;color:#4a2f14;text-shadow:0 1px 10px rgba(253,247,232,.92);
+  opacity:0;animation-name:pulsein,pulse;animation-duration:1s,2.4s;animation-delay:.5s,1.5s;
+  animation-fill-mode:both,backwards;animation-timing-function:ease,ease-in-out;
+  animation-iteration-count:1,infinite}
+.guide.gone{opacity:0;transition:opacity .5s ease;animation:none}
+@keyframes pulsein{from{opacity:0}to{opacity:.8}}
+@keyframes pulse{0%,100%{opacity:.8}50%{opacity:1}}
+@keyframes fadeup{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+
+.panel{position:absolute;left:6.5%;right:6.5%;top:50%;transform:translateY(-50%);z-index:8;
+  background:linear-gradient(rgba(253,249,240,.98),rgba(250,243,229,.98));
+  border:1px solid rgba(168,135,63,.75);border-radius:2px;
+  box-shadow:0 0 0 4px rgba(250,246,238,.75),0 0 0 5px rgba(168,135,63,.4),0 18px 44px rgba(45,28,12,.5);
+  padding:17px 16px 13px;opacity:0;visibility:hidden;max-height:76%;
+  overflow-y:auto;-webkit-overflow-scrolling:touch;
+  transition:opacity .7s ease,transform .7s cubic-bezier(.16,1,.3,1);transform:translateY(-50%) scale(.96)}
+.panel.on{opacity:1;visibility:visible;transform:translateY(-50%) scale(1)}
+.panel::-webkit-scrollbar{width:0}
+.panel .topleft{width:10px;height:10px;border-top:2px solid rgba(168,135,63,.9);border-left:2px solid rgba(168,135,63,.9);
+  position:absolute;left:5px;top:5px}
+.panel .topright{width:10px;height:10px;border-top:2px solid rgba(168,135,63,.9);border-right:2px solid rgba(168,135,63,.9);
+  position:absolute;right:5px;top:5px}
+.panel .botleft{width:10px;height:10px;border-bottom:2px solid rgba(168,135,63,.9);border-left:2px solid rgba(168,135,63,.9);
+  position:absolute;left:5px;bottom:5px}
+.panel .botright{width:10px;height:10px;border-bottom:2px solid rgba(168,135,63,.9);border-right:2px solid rgba(168,135,63,.9);
+  position:absolute;right:5px;bottom:5px}
+.p-title{font-family:'BrushKai','KaiTi',serif;font-size:.88rem;color:#5a3a2a;letter-spacing:.05em;text-align:center;margin-bottom:9px}
+.p-thesis{font-family:'BrushKai','KaiTi',serif;font-weight:700;font-size:clamp(1.35rem,4.2vh,1.6rem);color:#8f2f20;
+  letter-spacing:.14em;text-indent:.14em;text-align:center;line-height:1.3;margin-bottom:10px}
+.p-body{font-size:.7rem;line-height:1.72;color:#3a2f1f;text-align:center;letter-spacing:.02em;margin-bottom:9px}
+.p-deep{font-size:.64rem;line-height:1.72;color:#5a3a2a;text-align:center;margin-bottom:10px}
+.p-note{font-size:.52rem;line-height:1.8;color:#6d5a3e;text-align:left;
+  border-top:1px dashed rgba(168,135,63,.6);padding-top:8px;margin-bottom:12px}
+.p-btn{display:block;margin:0 auto;padding:7px 34px 8px;font-size:.78rem;letter-spacing:.5em;text-indent:.5em;
+  font-weight:700;color:#fdf3e2;background:#c8452f;border:1px solid #a83726;border-radius:1px;
+  box-shadow:0 2px 8px rgba(150,55,30,.35);cursor:pointer;-webkit-tap-highlight-color:transparent}
+.p-btn:active{background:#ad3826}
+
+.hint{position:absolute;left:0;right:0;bottom:3%;z-index:5;display:flex;justify-content:center;align-items:center;gap:.42rem;
+  font-size:.54rem;font-weight:700;letter-spacing:.26em;text-indent:.26em;color:#241c14;
+  text-shadow:0 1px 8px rgba(253,247,232,.9);opacity:0}
+.hint.on{opacity:1;transition:opacity .8s ease .3s}
+.hint .arr{width:8px;height:8px;border-right:1.5px solid #241c14;border-bottom:1.5px solid #241c14;transform:rotate(45deg)}
+
+/* ── 印章替换：统一「口旋湖草」篆印（容器保留原类名/尺寸/动画，文字→图） ── */
+.seal,.p4-seal,.p6-seal,.p7-seal,.p8-seal,.p8-seal2,.seal2,.p11-seal,.chop,
+.intro-seal,.seal-stamp,.ch-seal,.card-seal,.card-top-seal{
+  background:transparent !important;box-shadow:none !important;
+  border-color:transparent !important;color:transparent !important;
+}
+.chop::after{content:none !important}
+.seal img,.p4-seal img,.p6-seal img,.p7-seal img,.p8-seal img,.p8-seal2 img,.seal2 img,
+.p11-seal img,.chop img,.intro-seal img,.seal-stamp img,.ch-seal img,.card-seal img,
+.card-top-seal img{
+  display:block;flex:none;width:100%;height:100%;object-fit:cover;border-radius:1px;
+}
+
+
+/* ===== 统一顶部会展条（全部页面一致） ===== */
+.top>span,.top>span.left,.topbar>span,.fest,
+.p4-topbar>span,.p6-topbar>span,.p7-topbar>span,.p8-top>span,.head .topbar,.topbar-fest>span{
+  font-family:'KaiTi','Kaiti SC','STKaiti','KaiTi',serif!important;
+  font-size:.72rem!important;font-weight:700!important;
+  letter-spacing:.16em!important;
+  color:#3a3229!important;
+  text-shadow:0 1px 6px rgba(253,247,232,.9)!important;
+  opacity:.92!important;
+}
+.top>span>i,.top>span.left>i,.topbar>span>i,.p4-topbar>span>i,
+.p6-topbar>span>i,.p7-topbar>span>i,.p8-top>span>i,.head .topbar>i,.topbar-fest>span>i{
+  display:inline-block!important;width:4px!important;height:12px!important;
+  border-radius:1px!important;background:#c43328!important;
+  margin-right:8px!important;vertical-align:-1px!important;
+  border:0!important;
+}
+.fest{border-left:0!important;padding-left:0!important}
+.topbar-fest{
+  position:absolute!important;left:22px!important;right:auto!important;top:3.2%!important;
+  z-index:50!important;height:auto!important;background:transparent!important;
+  display:flex!important;justify-content:flex-start!important;pointer-events:none!important;
+}
+.head{position:absolute!important;left:22px!important;right:auto!important;top:3.2%!important;padding:0!important}

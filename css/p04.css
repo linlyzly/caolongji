@@ -1,0 +1,196 @@
+
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{background:#cdbfa6;overflow:hidden;-webkit-tap-highlight-color:transparent}
+.stage{position:relative;width:min(390px,100%);height:100dvh;margin:0 auto;
+  overflow:hidden;background:#efe4cd;box-shadow:0 0 60px rgba(60,40,20,.28)}
+.stage > section{position:absolute;inset:0;width:100%;height:100dvh;overflow:hidden}
+.stage > section:not(.enter) *{animation:none !important}
+#p4 .p4-layer{position:absolute;inset:0;z-index:2}
+@font-face{font-family:'BrushKaiP3';src:url(data:font/woff2;base64,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) format('woff2');font-display:swap}
+
+/* ═══════ 第 4 页 · 一条龙的样子 ═══════ */
+#p4{background:#efe4cd}
+#p4 .p4-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  object-position:50% 48%;z-index:0;opacity:1;
+  animation:p4_kb 46s cubic-bezier(.16,1,.3,1) infinite alternate}
+@keyframes p4_kb{from{transform:scale(1.03) translateY(-4px)}to{transform:scale(1) translateY(0)}}
+#p4 .p4-veil-top{position:absolute;left:0;right:0;top:0;height:34%;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(239,228,205,.88) 0%,rgba(239,228,205,.66) 42%,
+    rgba(239,228,205,.24) 78%,rgba(239,228,205,0) 100%)}
+#p4 .p4-veil-bot{position:absolute;left:0;right:0;bottom:0;height:30%;z-index:1;pointer-events:none;
+  background:linear-gradient(0deg,rgba(239,228,205,.80) 0%,rgba(239,228,205,.52) 34%,
+    rgba(239,228,205,.16) 72%,rgba(239,228,205,0) 100%)}
+/* 顶行 */
+#p4 .p4-topbar{position:absolute;left:22px;right:22px;top:3.2%;z-index:6;
+  display:flex;justify-content:space-between;align-items:flex-start;
+  font-size:.58rem;font-weight:600;letter-spacing:.14em;text-indent:.14em;color:#3a3229;
+  text-shadow:0 1px 8px rgba(239,228,205,.95)}
+#p4 .p4-topbar .bar{display:inline-block;width:2px;height:.82em;background:#c8452f;
+  margin-right:.6em;vertical-align:-.06em}
+#p4 .p4-seal{width:1.85rem;height:1.85rem;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;background:#c8452f;border-radius:1px;
+  font-family:'BrushKaiP3',serif;color:#fdf3e2;font-size:.58rem;line-height:1.04;
+  letter-spacing:0;text-indent:0;box-shadow:0 1px 5px rgba(60,40,20,.32)}
+/* ═══ 卷轴:顶部留白,横放。没点之前只放装饰。 ═══ */
+#p4 .p4-scroll{position:absolute;left:2.5%;right:2.5%;top:7.6%;height:24.5%;z-index:4;
+  background:url(../img/p04_05.webp) center/100% 100% no-repeat;
+  filter:drop-shadow(0 12px 26px rgba(60,40,20,.30))}
+/* 空卷轴的装饰:淡墨竹叶 + 一方小印 */
+#p4 .p4-deco{position:absolute;left:12%;right:12%;top:14%;bottom:14%;z-index:1;
+  opacity:.5;transition:opacity .4s ease;
+  background:
+    radial-gradient(38% 62% at 16% 44%,rgba(70,80,60,.20) 0%,rgba(70,80,60,.07) 46%,rgba(70,80,60,0) 100%),
+    radial-gradient(30% 54% at 30% 62%,rgba(70,80,60,.15) 0%,rgba(70,80,60,0) 100%),
+    radial-gradient(26% 50% at 82% 40%,rgba(70,80,60,.13) 0%,rgba(70,80,60,0) 100%)}
+#p4 .p4-deco::after{content:"";position:absolute;right:4%;bottom:-6%;
+  width:20px;height:20px;background:#c8452f;border-radius:1px;opacity:.72;
+  box-shadow:0 0 0 1px rgba(253,243,226,.5) inset}
+#p4 .p4-scroll.has-text .p4-deco{opacity:0}
+/* 写在卷轴纸面上的字 */
+#p4 .p4-write{position:absolute;left:10.5%;right:10.5%;top:11%;bottom:11%;z-index:2;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  gap:.42em;overflow:hidden;text-align:center}
+/* 标题行:毛笔字体(这几个字在子集里,不会缺字) */
+#p4 .p4-line{display:flex;justify-content:center;align-items:baseline;flex-wrap:wrap;
+  white-space:normal;max-width:100%}
+#p4 .p4-line.title{font-family:'BrushKaiP3','LXGW WenKai',serif;
+  font-size:clamp(.92rem,2.85vh,1.16rem);color:#2b2115;line-height:1.2;
+  letter-spacing:.06em;margin-bottom:.14em}
+/* 正文行:楷体(覆盖最广,一定显示得出来),字距松一点更好读 */
+#p4 .p4-line.body{font-family:'LXGW WenKai','Kaiti SC','STKaiti','KaiTi','SimSun',serif;
+  font-size:clamp(.68rem,2.1vh,.86rem);color:#3a2f20;line-height:1.62;
+  letter-spacing:.03em}
+#p4 .p4-line span{display:inline-block;opacity:0;transform:translateY(-4px)}
+#p4 .p4-line.on span{animation:p4_ink .32s cubic-bezier(.16,1,.3,1) both}
+@keyframes p4_ink{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+/* ═══ 锚点:圆环缓缓一收一放 ═══ */
+#p4 .p4-hot{position:absolute;z-index:7;border-radius:50%;cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+  box-shadow:0 0 0 1.5px rgba(200,69,47,.62),0 0 0 5px rgba(200,69,47,.10);
+  animation:p4_breath 3.4s cubic-bezier(.4,0,.6,1) infinite}
+@keyframes p4_breath{
+  0%,100%{box-shadow:0 0 0 1.5px rgba(200,69,47,.42),0 0 0 4px rgba(200,69,47,.05)}
+  50%    {box-shadow:0 0 0 2px rgba(200,69,47,.92),0 0 0 13px rgba(200,69,47,.16)}}
+#p4 .p4-hot.on{box-shadow:0 0 0 2px rgba(176,57,42,.95),0 0 0 15px rgba(176,57,42,.20);
+  animation:p4_breath 3.4s cubic-bezier(.4,0,.6,1) infinite}
+/* 题签也是锚点 */
+#p4 .p4-title{position:absolute;left:15px;top:34%;z-index:7;
+  padding:12px 10px 13px;display:flex;flex-direction:column;align-items:center;gap:.02em;
+  background:linear-gradient(180deg,rgba(247,240,225,.94),rgba(238,229,209,.90));
+  border:1px solid rgba(120,96,56,.32);border-radius:2px;cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+  box-shadow:0 8px 22px -10px rgba(48,32,16,.5);
+  font-family:'BrushKaiP3','LXGW WenKai',serif;font-weight:400;
+  font-size:clamp(.92rem,2.85vh,1.24rem);line-height:1.06;color:#241f18;
+  animation:p4_tbreath 3.4s cubic-bezier(.4,0,.6,1) infinite}
+@keyframes p4_tbreath{
+  0%,100%{box-shadow:0 8px 22px -10px rgba(48,32,16,.5),0 0 0 0 rgba(200,69,47,.0)}
+  50%    {box-shadow:0 8px 22px -10px rgba(48,32,16,.5),0 0 0 7px rgba(200,69,47,.20)}}
+#p4 .p4-title span{display:block}
+#p4 .p4-hot b{position:absolute;left:50%;transform:translateX(-50%);bottom:-1.5em;
+  white-space:nowrap;font-weight:600;font-size:.52rem;letter-spacing:.14em;text-indent:.14em;
+  color:#5a4a35;background:rgba(247,241,228,.93);border:1px solid rgba(168,135,63,.44);
+  border-radius:2px;padding:1px 5px;text-shadow:none}
+/* 底部三块 */
+#p4 .p4-lead{position:absolute;left:7%;right:7%;bottom:18%;z-index:6;text-align:center;
+  font-family:'BrushKaiP3',serif;font-size:clamp(.92rem,2.65vh,1.1rem);
+  color:#241f18;letter-spacing:.04em;
+  text-shadow:0 1px 1px rgba(239,228,205,.95),0 0 10px rgba(239,228,205,.9)}
+#p4 .p4-body{position:absolute;left:9%;right:9%;bottom:11%;z-index:6;text-align:center;
+  font-size:.68rem;line-height:1.7;color:#3a3229;
+  text-shadow:0 1px 1px rgba(239,228,205,.95),0 0 8px rgba(239,228,205,.9)}
+#p4 .p4-body em{font-style:normal;color:#b0392a;font-weight:600}
+#p4 .p4-fact{position:absolute;left:7%;right:7%;bottom:5.6%;z-index:6;text-align:center;
+  font-size:.5rem;line-height:1.5;color:rgba(58,50,41,.7);
+  text-shadow:0 1px 1px rgba(239,228,205,.95)}
+#p4 .p4-hint{position:absolute;left:0;right:0;bottom:1.4%;z-index:6;
+  display:flex;justify-content:center;align-items:center;gap:.42rem;
+  font-size:.56rem;font-weight:600;letter-spacing:.26em;text-indent:.26em;color:#241c14;
+  text-shadow:0 1px 8px rgba(239,228,205,.92)}
+#p4 .p4-hint .arr{width:8px;height:8px;border-right:1.5px solid #241c14;
+  border-bottom:1.5px solid #241c14;transform:rotate(45deg);
+  animation:p4_drift 2.4s ease-in-out infinite}
+@keyframes p4_drift{0%,100%{transform:rotate(45deg) translate(0,0);opacity:.45}
+  50%{transform:rotate(45deg) translate(3px,3px);opacity:1}}
+/* ═══ 题签的弹窗:一张纸上的实拍照片,细金边 + 来源小字 ═══
+   (这是我按全片"实景加标注"的规矩设计的;照片是占位,用户后期替换) */
+#p4 .p4-mask{position:absolute;inset:0;z-index:20;background:rgba(30,22,12,.52);
+  opacity:0;pointer-events:none;transition:opacity .26s ease}
+#p4 .p4-mask.on{opacity:1;pointer-events:auto}
+#p4 .p4-pop{position:absolute;left:6.5%;right:6.5%;top:50%;z-index:21;
+  transform:translateY(-50%) scale(.95);opacity:0;pointer-events:none;
+  padding:11px 11px 12px;border-radius:3px;background:#f7f1e4;
+  box-shadow:0 26px 56px -22px rgba(30,18,8,.72),0 0 0 1px rgba(120,96,56,.2) inset;
+  transition:opacity .3s cubic-bezier(.16,1,.3,1),transform .38s cubic-bezier(.16,1,.3,1)}
+#p4 .p4-pop.on{opacity:1;pointer-events:auto;transform:translateY(-50%) scale(1)}
+/* 四角金线角标 */
+#p4 .p4-pop i.cn{position:absolute;width:14px;height:14px;border:1px solid rgba(168,135,63,.75)}
+#p4 .p4-pop i.c1{left:4px;top:4px;border-right:0;border-bottom:0}
+#p4 .p4-pop i.c2{right:4px;top:4px;border-left:0;border-bottom:0}
+#p4 .p4-pop i.c3{left:4px;bottom:4px;border-right:0;border-top:0}
+#p4 .p4-pop i.c4{right:4px;bottom:4px;border-left:0;border-top:0}
+#p4 .p4-pop img{display:block;margin:0 auto;width:auto;height:auto;
+  max-width:100%;max-height:62vh;
+  border:1px solid rgba(168,135,63,.5);border-radius:2px}
+#p4 .p4-pop .cap{margin-top:.62em;font-size:.5rem;line-height:1.55;
+  color:rgba(58,50,41,.72);text-align:center;letter-spacing:.04em}
+#p4 .p4-pop .cap b{font-weight:600;color:#8f2f20}
+#p4 .p4-pop .x{position:absolute;right:-9px;top:-9px;width:26px;height:26px;border-radius:50%;
+  background:#c8452f;color:#fdf3e2;display:flex;align-items:center;justify-content:center;
+  font-size:.7rem;box-shadow:0 4px 10px -3px rgba(30,18,8,.6);cursor:pointer;z-index:2}
+/* 进场 */
+#p4.enter .p4-topbar{animation:p4_rise .8s cubic-bezier(.16,1,.3,1) .06s both}
+#p4.enter .p4-seal{animation:p4_seal .68s cubic-bezier(.2,1.3,.4,1) .12s both}
+#p4.enter .p4-title{animation:p4_rise .9s cubic-bezier(.16,1,.3,1) .34s both,p4_tbreath 3.4s cubic-bezier(.4,0,.6,1) 1.3s infinite}
+#p4.enter .p4-scroll{animation:p4_rise 1.05s cubic-bezier(.16,1,.3,1) .2s both}
+#p4.enter .p4-hot{animation:p4_rise .7s cubic-bezier(.16,1,.3,1) .5s both,p4_breath 3.4s cubic-bezier(.4,0,.6,1) 1.3s infinite}
+#p4.enter .p4-lead{animation:p4_rise .86s cubic-bezier(.16,1,.3,1) .6s both}
+#p4.enter .p4-body{animation:p4_rise .86s cubic-bezier(.16,1,.3,1) .7s both}
+#p4.enter .p4-fact{animation:p4_rise .84s cubic-bezier(.16,1,.3,1) .82s both}
+#p4.enter .p4-hint{animation:p4_rise .8s cubic-bezier(.16,1,.3,1) .94s both}
+@keyframes p4_rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes p4_seal{0%{opacity:0;transform:scale(1.5)}70%{opacity:1;transform:scale(.94)}100%{opacity:1;transform:scale(1)}}
+
+
+/* ── 印章替换：统一「口旋湖草」篆印（容器保留原类名/尺寸/动画，文字→图） ── */
+.seal,.p4-seal,.p6-seal,.p7-seal,.p8-seal,.p8-seal2,.seal2,.p11-seal,.chop,
+.intro-seal,.seal-stamp,.ch-seal,.card-seal,.card-top-seal{
+  background:transparent !important;box-shadow:none !important;
+  border-color:transparent !important;color:transparent !important;
+}
+.chop::after{content:none !important}
+.seal img,.p4-seal img,.p6-seal img,.p7-seal img,.p8-seal img,.p8-seal2 img,.seal2 img,
+.p11-seal img,.chop img,.intro-seal img,.seal-stamp img,.ch-seal img,.card-seal img,
+.card-top-seal img{
+  display:block;flex:none;width:100%;height:100%;object-fit:cover;border-radius:1px;
+}
+
+
+/* ===== 统一顶部会展条（全部页面一致） ===== */
+.top>span,.top>span.left,.topbar>span,.fest,
+.p4-topbar>span,.p6-topbar>span,.p7-topbar>span,.p8-top>span,.head .topbar,.topbar-fest>span{
+  font-family:'KaiTi','Kaiti SC','STKaiti','KaiTi',serif!important;
+  font-size:.72rem!important;font-weight:700!important;
+  letter-spacing:.16em!important;
+  color:#3a3229!important;
+  text-shadow:0 1px 6px rgba(253,247,232,.9)!important;
+  opacity:.92!important;
+}
+.top>span>i,.top>span.left>i,.topbar>span>i,.p4-topbar>span>i,
+.p6-topbar>span>i,.p7-topbar>span>i,.p8-top>span>i,.head .topbar>i,.topbar-fest>span>i{
+  display:inline-block!important;width:4px!important;height:12px!important;
+  border-radius:1px!important;background:#c43328!important;
+  margin-right:8px!important;vertical-align:-1px!important;
+  border:0!important;
+}
+.fest{border-left:0!important;padding-left:0!important}
+.topbar-fest{
+  position:absolute!important;left:22px!important;right:auto!important;top:3.2%!important;
+  z-index:50!important;height:auto!important;background:transparent!important;
+  display:flex!important;justify-content:flex-start!important;pointer-events:none!important;
+}
+.head{position:absolute!important;left:22px!important;right:auto!important;top:3.2%!important;padding:0!important}
+
+/* ═══ 弹窗图注来源小字 ═══ */
+#p4 .p4-pop .src-note{display:block;margin-top:.35em;font-size:.86em;color:rgba(58,50,41,.55)}

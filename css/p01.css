@@ -1,0 +1,263 @@
+
+@font-face{font-family:'BrushKai';src:url(data:font/woff2;base64,d09GMgABAAAAAAf4AA4AAAAADPQAAAekAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGx4cHgZgAEwRCAqQMIwXCwwAATYCJAMUBCAFhCAHIAwHG9sJEQV9SKaRsnD+fj/+ZpW0HYMZD4SWXa+smXfmxBXuHO78kUCprLRrpmw5tS/V+vD8zT8PN49uNMpj9WFwvnvHR6VjPj+SlP7YzUnZZWMtorKA/qC+NTZZtgUgbJ0OfCZ+NqtAGCEkoFZCAo+bMG0eqkQhxPylUjhIj3go+DF+C5UhFDACzTiIpspV8DWoD+6FnESwEmOhUex5Rcv4sWg/apdzgveVXkEo+B1+GNWPteG/A3/q2qEAYYAgT6QDy0QIDTqPciUKoABq9/xkc33OOQub15S+emr7Q3Ouu2M04+RihEslVEccZaFTENrAsVCQjHCETGJVIbjn70CJHY5Nu7LVbQ03P2nuWJNRvHme18qed4NxVs35yQ+TbvIx2HJsoHnM902psEXU/aTvq3zr4X7G0aJxVDAM4bnmhd6TvNB5BdI6gTVwW0GyJEsjdpxNmEAAVkej/Y/EtoQth4CnwGqkLScgGExmjOQJSKZYWIG0gr/FyhDw4luLBOZ5im2DTYBFstkFRZl5/fKb+/WLM4Z1ypcllh3zEwM5zYkm5Uww8gQIrJTZWn2tHkm5iVOJbSqn6zAzNhOQrAyBnZHUUgJxthLry0Rz1bJUVmarElyynLAjWT7lPtV5y9KoNwmAgEVX+ZIVdiB6OJqXNNFMbBtvccpd1U1dyZeJphV2gAAo6XQaWqVF3tMXzf3PsJFmp5d3s20pEwWyfMRKmaUoT3FVxbJtXVdngtEJ8nKXlrvxE/zGZeayQv/+YcdWlmuQlpzVUQB5azRvgGyA4rXOxCw/cawrV33RdJDW+7JDYDmJ5r0FW5fGl66MRDr6yaTLJSvhU74ql2OC0Q+YvDLBb+A8tqUQdjTp6uu15YKxN8IiLMWoqd+qc0x8jyqkJU2yKKfc5Vx1V33ajRbS7E6g7daWryZghdeML1xOLDtF+SasU25OSi9CmuTc9b92OYHNJF8ccLTLzkiKCYYnGNQdyyldsNin/EpuHZEKG4hNYKfM9sryAq6L5gqkrdBAsRWwkknTklYosNyQWbHfZkFQbMXrZSNNAQIKeGS5JxgE8nmsr6O860hOeVdXdbmurlNdV2/ry+wwIfGljLoDfdHkai7p5nodmkJG7PmhvjJJLjVubPfFs3fcjPcFE4tEtcGqur1roe7eO27G5Ze61g060E5YNAVPRgPve3dx40Py33UvVU2rvrNH2+YD9ZX3TUXT7qsMd2+sjQ+c1TAGxfr2+W5A4y3l4szb2x/s4w3pd9Wgiv7F/vdfN+v0B2xUXS3SH1W/uFkaO6f1pLFdvgiF5j3wbk3lixOveOCnXi++MAoHXnigoU75sObP793+8yehrxewMpmgWYEnX5k17pN/3rpuUsdR3XEzvjfYOLqy5aH3nrirorCgqubxCdJvjfeMr7q87FLlkLKK/h0eUkQ4lnAXL2y083EX9eMP21UYnjJk2+DclNU8Y4fS4Lf3UoxS1kzSTG0f2ev0ZkNCfDjkcRidXjqMUA9fnjycmjJgoYLnmGaa4CBgab/iR3k83WEZ4W9e3lkl+NVsSP0ZpMv1CadYZuXcIwN05WOCu/cATtwdamLtLrVmM/fcrrMM0YX3iyAk6VNRPYf1snYpe8eS4w+t0m+W6TMug4YXl5WqMjhByVnLrt2IT6h38zR0ZoRWsi23i3QWCucUu5NPinadjKyipbJJQ9M/uhmtvVK1NXTV4wOf1Wt5tuEb+G7uRtuVZS2HH3KnzPTqGWKk1qNHCwSu9o1lWX3uPOutPEZyeNrpbbllN34LoePlCSoM/22dcrzAJCdDJD0bZm5578jAoZ2qZebV4Ye6EkdefmYgKSHJgQ62BkZHdqgPKXflG7FGuNmbXFg8eFNEhHGguI/QJtAonXapvlY9SrN69ZbCNz2yDUyXOv/n2DCuG5MSbSazDuYazuIhy1a91RiZDEujU9ILw8MuCYWZx7c6ufffe2zKjS1D55JKv6a4jtVqli2NJ8La118k+8+RdF9W2qNUkrXrc+/nWZv6v7k6qPHOad+a1tGOCTw+5yaH6eu82zhvd3ZLLdVJRItLXcL9Ch200zIpttTKsjmpVT9Hs4Pl/jSLqJ4eFpi6JrWliE8bM+p0mtEGJfUxG+EeY37ozeRmwc4oSec00SKr4tSgM8t/WEWeFwosqixEButsM/kprh8AAIAJNRpHX8cvuVxvEPOVxzAvUOq8cstpLvls2Bab/4b/RjNvmcnYwQElEhoZ8Mr7b/i/jHk7o91BhHmBISqYC+KTLbgy50EQWgxDqEAgygWQi/MgTX0sX5q2USykYI1XkIY+7kAGMVgAWXihGySwRg3kwA1hvD7eBJBDCy06oEEU/OGPdowkaIMU17ZBCzUUaK7dooEEfmhHF2TIRSOKIUcj2lAFeR+SwRdFBMmggxordaEMEnRBA8U6SmIEwQ8BCEDwXI9YjoulPXHb+G8RjSpUIhXJiN67S6nP/RzJN0Y90QUFIV6DOGdtAAIRATFKxswj3i8mRgHNbYcSEjTPQonQQUuJV1qsgRge74thh6JXSYcm+KEZ7WhtaW1HO2RQQ/LymRr4oxWNgtpT08vh+R/C1WX/5yAITvYO6v/QDexYAAAA) format('woff2');font-display:swap}
+:root{
+  /* 色彩取自画面本身:宣纸米 / 墨 / 朱砂 / 金 —— 全屏只有这四个 */
+  --paper:#efe4cd;
+  --ink:#241f18;
+  --ink-2:#4b4237;
+  --cinnabar:#ad3826;
+  --gold:#a8873f;
+  --e-out:cubic-bezier(.16,1,.3,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{font-family:'LXGW WenKai','Kaiti SC','STKaiti','KaiTi','SimSun',serif;
+  background:#d9cdb4;-webkit-tap-highlight-color:transparent;overflow:hidden}
+.page-cover{position:relative;width:min(390px,100%);height:100dvh;min-height:520px;
+  margin:0 auto;overflow:hidden;background:var(--paper)}
+
+/* 画心 */
+.art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  object-position:50% 44%;z-index:0;will-change:transform;
+  animation:kenburns 34s var(--e-out) infinite alternate}
+@keyframes kenburns{from{transform:scale(1.035) translateY(-6px)}to{transform:scale(1) translateY(0)}}
+
+/* 衬底:这一版是【浅色】衬底 —— 字是墨,底是宣纸,和上一版正好相反。
+   只在上下两端极薄一层,避免把画面自带的那点颜色洗掉。 */
+.veil-top{position:absolute;left:0;right:0;top:0;height:30%;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,
+    rgba(239,228,205,.96) 0%,rgba(239,228,205,.80) 42%,
+    rgba(239,228,205,.34) 76%,rgba(239,228,205,0) 100%)}
+/* 地脚加高加强 —— 底部几行原来压在稻田纹理上,9px 的字立不住 */
+.veil-bot{position:absolute;left:0;right:0;bottom:0;height:38%;z-index:1;pointer-events:none;
+  background:linear-gradient(0deg,
+    rgba(239,228,205,.975) 0%,rgba(239,228,205,.92) 34%,
+    rgba(239,228,205,.66) 62%,rgba(239,228,205,.24) 86%,rgba(239,228,205,0) 100%)}
+
+/* ── 排布:仍是单中轴,元素分组,不撒四角 ── */
+.inner{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;
+  align-items:center;padding:6.2% 24px 0;text-align:center}
+
+/* 顶行:展季一行 + 朱印(编号不做红框 —— 红框读起来像价签) */
+.top{flex:0 0 auto;width:100%;display:flex;justify-content:space-between;
+  align-items:flex-start;font-size:.62rem;font-weight:600;color:#241f18;
+  letter-spacing:.16em;text-indent:.16em}
+.top .dot{display:inline-block;width:5px;height:5px;border-radius:50%;
+  background:var(--cinnabar);margin-right:.55em;vertical-align:middle}
+.top .seal{width:1.9rem;height:1.9rem;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;background:var(--cinnabar);border-radius:1px;
+  font-family:'BrushKai',serif;color:#f7efe2;font-size:.62rem;line-height:1.04;
+  letter-spacing:0;text-indent:0;
+  box-shadow:0 1px 4px rgba(60,40,20,.28)}
+
+/* 主体:竖排标题 + 紧贴其右的竖排副题 —— 两组不同字号的列并置 */
+.mid{flex:1 1 auto;width:100%;display:flex;align-items:flex-start;
+  justify-content:center;padding-top:2.4vh}
+.hero{display:flex;align-items:flex-start;gap:22px}
+.vcol{display:flex;flex-direction:column;align-items:center}
+.title{font-family:'BrushKai','LXGW WenKai',serif;font-weight:400;
+  font-size:clamp(2.6rem,8.8vh,4.3rem);line-height:1.02;color:var(--ink);
+  gap:.06em;
+  text-shadow:0 1px 0 rgba(255,250,240,.75),0 2px 22px rgba(239,228,205,.9)}
+.title span{display:block;line-height:1.04}
+.sub{font-size:.84rem;line-height:1;color:#241f18;gap:.44em;
+  padding-top:.5em;
+  text-shadow:0 1px 3px rgba(239,228,205,1),0 0 16px rgba(239,228,205,.98),0 0 30px rgba(239,228,205,.7)}
+.sub span{display:block;line-height:1}
+
+/* 底部:两行小字 + 入口 + 上滑 */
+.bot{flex:0 0 auto;width:100%;display:flex;flex-direction:column;margin-bottom:7.2%;
+  align-items:center;gap:1.05vh}
+.idline{font-size:.66rem;font-weight:600;letter-spacing:.16em;text-indent:.16em;color:#7a5f24}
+.rule{width:88px;height:1px;
+  background:linear-gradient(90deg,rgba(168,135,63,0),rgba(168,135,63,.75),rgba(168,135,63,0))}
+.slogan{font-size:.66rem;font-weight:600;letter-spacing:.24em;text-indent:.24em;color:#9c3021}
+/* 开始探索:换成国风匾额图。白底已抠成透明,形状不规则所以用 alpha 不是矩形裁切 */
+.entry{display:flex;justify-content:center}
+.entry a{display:block;width:78%;max-width:286px;text-decoration:none;
+  transition:transform .18s cubic-bezier(.16,1,.3,1)}
+.entry a:active{transform:scale(.955)}
+.entry img{display:block;width:100%;height:auto;
+  filter:drop-shadow(0 3px 9px rgba(110,64,34,.34))}
+.hint{display:flex;justify-content:center;align-items:center;gap:.5rem;
+  font-size:.68rem;font-weight:600;letter-spacing:.26em;text-indent:.26em;color:#241f18}
+.hint .arr{width:10px;height:10px;border-right:1.5px solid var(--ink-2);
+  border-bottom:1.5px solid var(--ink-2);transform:rotate(45deg);
+  animation:drift 2.4s ease-in-out infinite}
+@keyframes drift{0%,100%{transform:rotate(45deg) translate(0,0);opacity:.45}
+  50%{transform:rotate(45deg) translate(3px,3px);opacity:1}}
+
+/* 入场:默认即最终态,动画只作增强 */
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes sealIn{0%{opacity:0;transform:scale(1.5)}70%{opacity:1;transform:scale(.94)}100%{opacity:1;transform:scale(1)}}
+@keyframes ruleIn{from{opacity:0;transform:scaleX(.2)}to{opacity:1;transform:scaleX(1)}}
+.top{animation:rise .84s var(--e-out) .08s both}
+.top .seal{animation:sealIn .7s cubic-bezier(.2,1.3,.4,1) .12s both}
+.title{animation:rise 1.15s var(--e-out) .24s both}
+.sub{animation:rise .9s var(--e-out) .56s both}
+.idline{animation:rise .84s var(--e-out) .76s both}
+.rule{animation:ruleIn .9s var(--e-out) .84s both}
+.slogan{animation:rise .84s var(--e-out) .90s both}
+.entry{animation:rise .84s var(--e-out) 1.00s both}
+.hint{animation:rise .84s var(--e-out) 1.10s both}
+@media (prefers-reduced-motion: reduce){*{animation:none !important}}
+
+/* ═══════ 氛围动效 ═══════
+   三个原则:慢(13~21s)、小(位移几像素到几十像素)、错开(周期互不相同,永不同步)。
+   全部只改 transform / opacity —— GPU 合成,不用滤镜,不掉帧。
+   全部压在文字之下(z-index:2,文字是 3)。 */
+
+
+/* ═══════ 氛围动效 v2 ═══════
+   四条原则:慢(13~26s)、小、周期互不相同、不成焦点。
+   全部只改 transform / opacity —— GPU 合成;不用滤镜、不做全屏模糊,不掉帧。
+   全部 z-index:2,在文字(3)之下。 */
+
+/* ① 风过留痕:一道极宽的柔光带极慢纵向扫过 —— 像风掠过田野时稻穗依次倒伏的明暗波 */
+.fx-gust{position:absolute;left:-12%;right:-12%;top:0;height:38%;z-index:2;pointer-events:none;
+  background:linear-gradient(180deg,
+    rgba(255,250,235,0) 0%,rgba(255,250,235,.075) 32%,
+    rgba(255,250,235,.13) 50%,rgba(255,250,235,.07) 70%,rgba(255,250,235,0) 100%);
+  animation:gust 18s cubic-bezier(.42,0,.58,1) infinite}
+@keyframes gust{
+  0%  {transform:translate3d(0,-125%,0)}
+  100%{transform:translate3d(0,330%,0)}
+}
+
+/* ② 天光缓移:斜向天光缓缓移过纸面 */
+.fx-sheen{position:absolute;inset:-20% -60%;z-index:2;pointer-events:none;
+  background:linear-gradient(104deg,
+    rgba(255,252,240,0) 42%,rgba(255,252,240,.30) 50%,rgba(255,252,240,0) 58%);
+  opacity:.26;animation:sheen 21s linear infinite}
+@keyframes sheen{0%{transform:translateX(-58%)}100%{transform:translateX(58%)}}
+
+/* ③ 红日呼吸 */
+.fx-sun{position:absolute;z-index:2;pointer-events:none;border-radius:50%;
+  left:19.51%;top:64.02%;width:132px;height:132px;margin:-66px 0 0 -66px;
+  background:radial-gradient(circle,
+    rgba(232,132,80,.50) 0%,rgba(232,132,80,.24) 34%,rgba(232,132,80,0) 72%);
+  animation:sunBreath 13s ease-in-out infinite}
+@keyframes sunBreath{
+  0%,100%{opacity:.30;transform:scale(.94)}
+  50%    {opacity:.85;transform:scale(1.06)}
+}
+
+/* ④ 雾气流过:中段那层雾被风带着横向漂移 */
+.fx-mist{position:absolute;left:-30%;right:-30%;top:44%;height:26%;z-index:2;pointer-events:none;
+  background:linear-gradient(90deg,
+    rgba(255,252,244,0) 0%,rgba(255,252,244,.16) 26%,
+    rgba(255,252,244,.22) 50%,rgba(255,252,244,.14) 74%,rgba(255,252,244,0) 100%);
+  -webkit-mask-image:linear-gradient(180deg,transparent,#000 40%,#000 60%,transparent);
+          mask-image:linear-gradient(180deg,transparent,#000 40%,#000 60%,transparent);
+  animation:mist 26s ease-in-out infinite alternate}
+@keyframes mist{from{transform:translate3d(-9%,0,0)}to{transform:translate3d(9%,0,0)}}
+
+/* ── 乙 · 写意点叶 v3:小、多、拉长 ──
+   为什么变小必须同时拉长:6~8px 的圆疙瘩会读成"灰尘",细长一头尖的才还是叶子。
+   尺寸按长尾分布(多数 6~9px,少数 12~15px),并让大的快、小的慢,给出纵深。 */
+.fx-dot{position:absolute;top:0;z-index:2;pointer-events:none;will-change:transform;
+  background:radial-gradient(ellipse at 42% 34%,#c8523c 0%,#b03a2a 60%,#9c3021 100%);
+  filter:blur(.4px);
+  animation-name:leafFall;animation-timing-function:linear;animation-iteration-count:infinite}
+@keyframes leafFall{
+  0%  {transform:translate3d(0,-12vh,0) rotate(0deg);opacity:0}
+  8%  {opacity:var(--op,.8)}
+  92% {opacity:var(--op,.8)}
+  100%{transform:translate3d(var(--drift,-22vw),98vh,0) rotate(var(--rot,300deg));opacity:0}
+}
+.dx0{width:2.5px;height:4.2px;left:5.3%;border-radius:58% 42% 66% 34% / 40% 62% 38% 60%;opacity:0.42;animation-duration:30.9s;animation-delay:-1.2s;--drift:-11vw;--rot:171deg}
+.dx1{width:2.8px;height:4.8px;left:13.7%;border-radius:66% 34% 52% 48% / 34% 66% 34% 66%;opacity:0.46;animation-duration:29.8s;animation-delay:-19.5s;--drift:-13vw;--rot:215deg}
+.dx2{width:2.9px;height:4.6px;left:24.0%;border-radius:48% 52% 70% 30% / 44% 56% 44% 56%;opacity:0.46;animation-duration:27.4s;animation-delay:-4.9s;--drift:-10vw;--rot:162deg}
+.dx3{width:2.6px;height:4.2px;left:35.4%;border-radius:62% 38% 44% 56% / 38% 62% 40% 60%;opacity:0.44;animation-duration:31.1s;animation-delay:-1.4s;--drift:-14vw;--rot:216deg}
+.dx4{width:2.7px;height:4.6px;left:44.1%;border-radius:58% 42% 66% 34% / 40% 62% 38% 60%;opacity:0.41;animation-duration:29.9s;animation-delay:-19.7s;--drift:-9vw;--rot:128deg}
+.dx5{width:2.4px;height:4.0px;left:53.0%;border-radius:66% 34% 52% 48% / 34% 66% 34% 66%;opacity:0.36;animation-duration:31.3s;animation-delay:-6.4s;--drift:-14vw;--rot:187deg}
+.dx6{width:2.8px;height:4.9px;left:64.3%;border-radius:48% 52% 70% 30% / 44% 56% 44% 56%;opacity:0.45;animation-duration:32.0s;animation-delay:-12.1s;--drift:-12vw;--rot:136deg}
+.dx7{width:2.4px;height:4.0px;left:73.4%;border-radius:62% 38% 44% 56% / 38% 62% 40% 60%;opacity:0.42;animation-duration:28.1s;animation-delay:-6.7s;--drift:-11vw;--rot:207deg}
+.dx8{width:2.4px;height:4.1px;left:83.3%;border-radius:58% 42% 66% 34% / 40% 62% 38% 60%;opacity:0.42;animation-duration:27.8s;animation-delay:-6.8s;--drift:-11vw;--rot:221deg}
+.dx9{width:2.9px;height:4.9px;left:93.3%;border-radius:66% 34% 52% 48% / 34% 66% 34% 66%;opacity:0.45;animation-duration:31.2s;animation-delay:-18.0s;--drift:-13vw;--rot:238deg}
+.dx10{width:3.8px;height:6.4px;left:2.4%;border-radius:66% 34% 52% 48% / 34% 66% 34% 66%;opacity:0.55;animation-duration:20.6s;animation-delay:-8.1s;--drift:-13vw;--rot:207deg}
+.dx11{width:3.5px;height:5.7px;left:13.7%;border-radius:48% 52% 70% 30% / 44% 56% 44% 56%;opacity:0.51;animation-duration:20.2s;animation-delay:-19.0s;--drift:-18vw;--rot:193deg}
+.dx12{width:3.9px;height:6.3px;left:25.0%;border-radius:62% 38% 44% 56% / 38% 62% 40% 60%;opacity:0.53;animation-duration:22.5s;animation-delay:-6.7s;--drift:-17vw;--rot:201deg}
+.dx13{width:3.7px;height:6.3px;left:35.3%;border-radius:58% 42% 66% 34% / 40% 62% 38% 60%;opacity:0.53;animation-duration:22.8s;animation-delay:-5.8s;--drift:-14vw;--rot:295deg}
+.dx14{width:3.9px;height:6.1px;left:44.2%;border-radius:66% 34% 52% 48% / 34% 66% 34% 66%;opacity:0.54;animation-duration:23.2s;animation-delay:-22.1s;--drift:-17vw;--rot:297deg}
+.dx15{width:3.9px;height:6.7px;left:53.3%;border-radius:48% 52% 70% 30% / 44% 56% 44% 56%;opacity:0.58;animation-duration:20.7s;animation-delay:-12.7s;--drift:-14vw;--rot:204deg}
+.dx16{width:3.9px;height:6.8px;left:62.9%;border-radius:62% 38% 44% 56% / 38% 62% 40% 60%;opacity:0.59;animation-duration:20.2s;animation-delay:-15.8s;--drift:-16vw;--rot:230deg}
+.dx17{width:3.7px;height:5.9px;left:72.6%;border-radius:58% 42% 66% 34% / 40% 62% 38% 60%;opacity:0.54;animation-duration:23.3s;animation-delay:-8.6s;--drift:-15vw;--rot:274deg}
+.dx18{width:3.3px;height:5.7px;left:84.6%;border-radius:66% 34% 52% 48% / 34% 66% 34% 66%;opacity:0.56;animation-duration:22.6s;animation-delay:-13.6s;--drift:-14vw;--rot:188deg}
+.dx19{width:3.3px;height:5.2px;left:93.1%;border-radius:48% 52% 70% 30% / 44% 56% 44% 56%;opacity:0.53;animation-duration:20.6s;animation-delay:-1.3s;--drift:-15vw;--rot:195deg}
+.dx20{width:4.0px;height:6.9px;left:4.3%;border-radius:48% 52% 70% 30% / 44% 56% 44% 56%;opacity:0.56;animation-duration:18.0s;animation-delay:-2.4s;--drift:-19vw;--rot:256deg}
+.dx21{width:4.1px;height:6.5px;left:14.7%;border-radius:62% 38% 44% 56% / 38% 62% 40% 60%;opacity:0.58;animation-duration:19.1s;animation-delay:-14.2s;--drift:-16vw;--rot:226deg}
+.dx22{width:3.8px;height:6.6px;left:25.2%;border-radius:58% 42% 66% 34% / 40% 62% 38% 60%;opacity:0.63;animation-duration:19.2s;animation-delay:-5.0s;--drift:-17vw;--rot:312deg}
+.dx23{width:3.9px;height:6.8px;left:33.9%;border-radius:66% 34% 52% 48% / 34% 66% 34% 66%;opacity:0.59;animation-duration:19.3s;animation-delay:-6.8s;--drift:-18vw;--rot:288deg}
+.dx24{width:4.1px;height:6.9px;left:44.9%;border-radius:48% 52% 70% 30% / 44% 56% 44% 56%;opacity:0.64;animation-duration:20.5s;animation-delay:-15.9s;--drift:-21vw;--rot:335deg}
+.dx25{width:3.7px;height:6.4px;left:53.5%;border-radius:62% 38% 44% 56% / 38% 62% 40% 60%;opacity:0.63;animation-duration:18.7s;animation-delay:-15.0s;--drift:-21vw;--rot:257deg}
+.dx26{width:3.9px;height:6.5px;left:64.1%;border-radius:58% 42% 66% 34% / 40% 62% 38% 60%;opacity:0.59;animation-duration:18.9s;animation-delay:-5.8s;--drift:-16vw;--rot:342deg}
+.dx27{width:3.7px;height:6.4px;left:73.0%;border-radius:66% 34% 52% 48% / 34% 66% 34% 66%;opacity:0.61;animation-duration:17.0s;animation-delay:-6.1s;--drift:-21vw;--rot:283deg}
+.dx28{width:4.3px;height:7.3px;left:83.1%;border-radius:48% 52% 70% 30% / 44% 56% 44% 56%;opacity:0.62;animation-duration:17.7s;animation-delay:-10.4s;--drift:-21vw;--rot:294deg}
+.dx29{width:4.2px;height:7.1px;left:93.2%;border-radius:62% 38% 44% 56% / 38% 62% 40% 60%;opacity:0.61;animation-duration:18.2s;animation-delay:-3.8s;--drift:-20vw;--rot:308deg}
+.dx30{width:4.7px;height:8.0px;left:2.6%;border-radius:62% 38% 44% 56% / 38% 62% 40% 60%;opacity:0.73;animation-duration:16.5s;animation-delay:-14.5s;--drift:-29vw;--rot:383deg}
+.dx31{width:5.6px;height:9.5px;left:13.1%;border-radius:58% 42% 66% 34% / 40% 62% 38% 60%;opacity:0.68;animation-duration:14.1s;animation-delay:-9.0s;--drift:-28vw;--rot:299deg}
+.dx32{width:5.2px;height:8.3px;left:22.5%;border-radius:66% 34% 52% 48% / 34% 66% 34% 66%;opacity:0.77;animation-duration:14.1s;animation-delay:-9.9s;--drift:-29vw;--rot:403deg}
+.dx33{width:5.1px;height:8.7px;left:33.2%;border-radius:48% 52% 70% 30% / 44% 56% 44% 56%;opacity:0.68;animation-duration:17.8s;animation-delay:-13.2s;--drift:-26vw;--rot:337deg}
+.dx34{width:4.7px;height:7.6px;left:43.7%;border-radius:62% 38% 44% 56% / 38% 62% 40% 60%;opacity:0.71;animation-duration:15.5s;animation-delay:-6.6s;--drift:-30vw;--rot:441deg}
+.dx35{width:5.3px;height:9.0px;left:54.1%;border-radius:58% 42% 66% 34% / 40% 62% 38% 60%;opacity:0.75;animation-duration:14.6s;animation-delay:-9.7s;--drift:-23vw;--rot:366deg}
+.dx36{width:5.4px;height:9.2px;left:63.6%;border-radius:66% 34% 52% 48% / 34% 66% 34% 66%;opacity:0.68;animation-duration:16.9s;animation-delay:-0.2s;--drift:-25vw;--rot:314deg}
+.dx37{width:4.8px;height:7.7px;left:75.2%;border-radius:48% 52% 70% 30% / 44% 56% 44% 56%;opacity:0.71;animation-duration:16.6s;animation-delay:-9.7s;--drift:-26vw;--rot:303deg}
+.dx38{width:4.5px;height:7.6px;left:83.6%;border-radius:62% 38% 44% 56% / 38% 62% 40% 60%;opacity:0.71;animation-duration:14.5s;animation-delay:-11.8s;--drift:-25vw;--rot:361deg}
+.dx39{width:5.1px;height:8.5px;left:95.3%;border-radius:58% 42% 66% 34% / 40% 62% 38% 60%;opacity:0.68;animation-duration:16.5s;animation-delay:-13.5s;--drift:-25vw;--rot:290deg}
+
+@media (prefers-reduced-motion: reduce){
+  .fx-gust,.fx-sheen,.fx-sun,.fx-mist,.fx-dot{animation:none !important}
+  .fx-dot{opacity:0 !important}
+}
+
+/* 丁 · 一道极慢的光扫过:像天光缓缓移过纸面。透明度只有 5%,几乎看不出来 */
+
+/* 庚 · 红日呼吸:极缓的明灭,给画面一个心跳 */
+
+  50%    {opacity:.85;transform:scale(1.06)}
+}
+
+@media (prefers-reduced-motion: reduce){
+  .fx-sheen,.fx-sun,.fx-leaf{animation:none !important}
+  .fx-leaf{opacity:0 !important}
+}
+
+/* ── 印章替换：统一「口旋湖草」篆印（容器保留原类名/尺寸/动画，文字→图） ── */
+.seal,.p4-seal,.p6-seal,.p7-seal,.p8-seal,.p8-seal2,.seal2,.p11-seal,.chop,
+.intro-seal,.seal-stamp,.ch-seal,.card-seal,.card-top-seal{
+  background:transparent !important;box-shadow:none !important;
+  border-color:transparent !important;color:transparent !important;
+}
+.chop::after{content:none !important}
+.seal img,.p4-seal img,.p6-seal img,.p7-seal img,.p8-seal img,.p8-seal2 img,.seal2 img,
+.p11-seal img,.chop img,.intro-seal img,.seal-stamp img,.ch-seal img,.card-seal img,
+.card-top-seal img{
+  display:block;flex:none;width:100%;height:100%;object-fit:cover;border-radius:1px;
+}
+
+
+/* ===== 统一顶部会展条（全部页面一致） ===== */
+.top>span,.top>span.left,.topbar>span,.fest,
+.p4-topbar>span,.p6-topbar>span,.p7-topbar>span,.p8-top>span,.head .topbar,.topbar-fest>span{
+  font-family:'KaiTi','Kaiti SC','STKaiti','KaiTi',serif!important;
+  font-size:.72rem!important;font-weight:700!important;
+  letter-spacing:.16em!important;
+  color:#3a3229!important;
+  text-shadow:0 1px 6px rgba(253,247,232,.9)!important;
+  opacity:.92!important;
+}
+.top>span>i,.top>span.left>i,.topbar>span>i,.p4-topbar>span>i,
+.p6-topbar>span>i,.p7-topbar>span>i,.p8-top>span>i,.head .topbar>i,.topbar-fest>span>i{
+  display:inline-block!important;width:4px!important;height:12px!important;
+  border-radius:1px!important;background:#c43328!important;
+  margin-right:8px!important;vertical-align:-1px!important;
+  border:0!important;
+}
+.fest{border-left:0!important;padding-left:0!important}
+.topbar-fest{
+  position:absolute!important;left:22px!important;right:auto!important;top:3.2%!important;
+  z-index:50!important;height:auto!important;background:transparent!important;
+  display:flex!important;justify-content:flex-start!important;pointer-events:none!important;
+}
+.head{position:absolute!important;left:22px!important;right:auto!important;top:3.2%!important;padding:0!important}

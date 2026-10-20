@@ -1,0 +1,854 @@
+
+:root{
+  --gold:#D9A441;
+  --gold-light:#F0D080;
+  --gold-deep:#B8862E;
+  --gold-grad:linear-gradient(180deg,#F7E7B6 0%,#E8C77B 45%,#B8862E 100%);
+  --vermilion:#C3272B;
+  --vermilion-deep:#9E1F22;
+  --vermilion-grad:linear-gradient(140deg,#D4403F 0%,#B02226 55%,#8E1A1E 100%);
+  --paper:#F5EFE0;
+  --paper-deep:#EDE4CC;
+  --ink:#2B2420;
+  --ink-light:#6B5B48;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html,body{
+  width:100%;height:100%;overflow:hidden;
+  font-family:"KaiTi","STKaiti","Noto Serif SC","SimSun",serif;
+  background:#0a0a0a;
+}
+body{
+  position:relative;line-height:1.6;
+  display:flex;align-items:center;justify-content:center;
+}
+#stage{
+  position:relative;
+  width:100%;
+  height:100%;
+  overflow:hidden;background:#111;
+}
+@media (min-width:421px){
+  body{padding:20px 0;}
+  #stage{
+    width:390px;
+    height:844px;
+    max-height:calc(100vh - 40px);
+    border-radius:12px;
+    box-shadow:0 0 60px rgba(0,0,0,.8);
+  }
+}
+
+/* ============ 开场黑屏 ============ */
+.intro-screen{
+  position:absolute;inset:0;z-index:1000;
+  background:radial-gradient(ellipse at 50% 30%,#1C1812 0%,#0a0a0a 72%);
+  display:flex;align-items:center;justify-content:flex-start;
+  flex-direction:column;
+  padding-top:calc(24% + 30px);
+  gap:16px;
+  transition:opacity 1.1s ease;
+}
+.intro-screen.hide{opacity:0;pointer-events:none;}
+.intro-seal{
+  width:46px;height:46px;
+  background:var(--vermilion-grad);
+  color:#F3E5C8;
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:bold;letter-spacing:.05em;
+  border-radius:5px;
+  box-shadow:0 0 24px rgba(195,39,43,.55), inset 0 0 0 2px rgba(243,229,200,.25);
+  opacity:0;
+  animation:stamp-in 1s cubic-bezier(.34,1.56,.64,1) .1s forwards;
+}
+.intro-title{
+  font-size:clamp(19px,5.4vw,25px);
+  font-weight:bold;
+  letter-spacing:.18em;
+  background:var(--gold-grad);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  opacity:0;
+  animation:intro-text 1.1s ease .5s forwards;
+  text-align:center;
+  filter:drop-shadow(0 0 20px rgba(217,164,65,.45));
+  font-style:italic;
+  transform:skewX(-3deg);
+  white-space:nowrap;
+}
+.intro-sub{
+  font-size:clamp(11px,3.1vw,13px);
+  color:rgba(240,208,128,.72);
+  letter-spacing:.24em;
+  opacity:0;
+  animation:intro-text 1.1s ease .9s forwards;
+  text-shadow:0 0 14px rgba(217,164,65,.3);
+  font-style:italic;
+  white-space:nowrap;
+}
+@keyframes intro-text{
+  0%{opacity:0;filter:blur(10px);transform:translateY(6px);}
+  100%{opacity:1;filter:blur(0);transform:translateY(0);}
+}
+
+/* ============ 主页面 ============ */
+.main-page{
+  position:relative;width:100%;height:100%;
+  opacity:0;
+  transition:opacity 1.1s ease;
+}
+.main-page.show{opacity:1;}
+
+.bg-scene{
+  position:absolute;inset:0;z-index:1;
+  overflow:hidden;
+}
+.bg-scene .bg-img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:50% 42%;
+}
+.bg-scene::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,
+    rgba(10,8,6,.34) 0%,
+    rgba(10,8,6,.02) 24%,
+    rgba(10,8,6,.10) 52%,
+    rgba(10,8,6,.50) 100%);
+  pointer-events:none;z-index:2;
+}
+.glow-orb{
+  position:absolute;top:-120px;right:-120px;width:340px;height:340px;
+  background:radial-gradient(circle,rgba(255,196,110,.34) 0%,rgba(255,180,90,.12) 45%,transparent 70%);
+  mix-blend-mode:screen;z-index:2;pointer-events:none;
+  animation:glow-breathe 7s ease-in-out infinite;
+}
+.glow-orb.lt{top:-140px;left:-140px;right:auto;width:300px;height:300px;background:radial-gradient(circle,rgba(255,214,150,.2) 0%,transparent 68%);animation-delay:3s;}
+@keyframes glow-breathe{0%,100%{opacity:.75;}50%{opacity:1;}}
+.vignette{
+  position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:radial-gradient(ellipse at 50% 42%,transparent 52%,rgba(12,8,4,.42) 100%);
+}
+
+/* 萤火 / 光点 */
+.firefly{
+  position:absolute;width:6px;height:6px;border-radius:50%;
+  background:#FFE8A0;box-shadow:0 0 14px #FFD87A,0 0 4px #fff;
+  animation:float 10s ease-in-out infinite;z-index:2;
+}
+@keyframes float{
+  0%,100%{transform:translate(0,0);opacity:.5;}
+  25%{transform:translate(15px,-25px);opacity:1;}
+  50%{transform:translate(-8px,-45px);opacity:.7;}
+  75%{transform:translate(-20px,-15px);opacity:.9;}
+}
+.grain-spark{
+  position:absolute;width:5px;height:5px;border-radius:50%;
+  background:#FFE8A0;box-shadow:0 0 12px #FFD87A,0 0 3px #fff;
+  animation:spark 4s ease-in-out infinite;z-index:2;
+}
+@keyframes spark{
+  0%,100%{opacity:.4;transform:scale(1);}
+  50%{opacity:1;transform:scale(1.6);}
+}
+.rice-ripple{
+  position:absolute;border-radius:50%;
+  border:2px solid rgba(255,232,160,.7);
+  transform:translate(-50%,-50%);
+  pointer-events:none;z-index:3;
+  animation:ripple 1.5s ease-out forwards;
+}
+@keyframes ripple{
+  0%{width:0;height:0;opacity:1;}
+  100%{width:100px;height:100px;opacity:0;}
+}
+
+/* 龙鳞金光粒子 */
+.scale-particle{
+  position:absolute;
+  width:14px;height:10px;
+  border-radius:50% 50% 45% 45% / 58% 58% 42% 42%;
+  background:linear-gradient(135deg,#FFE9A8 0%,#E8B85A 55%,#C99431 100%);
+  box-shadow:0 0 10px rgba(255,210,120,.9), inset 0 0 3px rgba(255,255,255,.8);
+  z-index:180;pointer-events:none;
+  animation:scale-rise 1.4s ease-out forwards;
+}
+@keyframes scale-rise{
+  0%{opacity:0;transform:translate(0,0) rotate(0deg) scale(.6);}
+  15%{opacity:1;}
+  100%{opacity:0;transform:translate(var(--dx),var(--dy)) rotate(var(--rot)) scale(1.1);}
+}
+
+/* 前景 */
+.foreground{
+  position:absolute;inset:0;z-index:10;
+  display:flex;flex-direction:column;
+  padding:12px 16px 10px 16px;
+}
+
+/* ============ 顶部 ============ */
+.top-row{
+  display:flex;align-items:flex-start;justify-content:space-between;
+  margin-bottom:4px;
+  flex-shrink:0;
+}
+.seal-stamp{
+  width:46px;height:46px;
+  background:var(--vermilion-grad);
+  color:#F3E5C8;
+  display:flex;align-items:center;justify-content:center;
+  font-family:"KaiTi","STKaiti",serif;
+  font-size:13px;font-weight:bold;line-height:1.3;text-align:center;
+  border-radius:5px;
+  box-shadow:0 4px 18px rgba(195,39,43,.55), inset 0 0 0 2px rgba(243,229,200,.22);
+  transform:rotate(-8deg);
+  opacity:0;
+}
+.seal-stamp.stamp-in{animation:stamp-in 1s cubic-bezier(.34,1.56,.64,1) forwards;}
+@keyframes stamp-in{
+  0%{opacity:0;transform:scale(2) rotate(-18deg);}
+  60%{opacity:1;transform:scale(.95) rotate(-8deg);}
+  100%{opacity:1;transform:scale(1) rotate(-8deg);}
+}
+.title-block{text-align:right;opacity:0;}
+.title-block.fade-in{animation:fade-slide-in 1s ease forwards;}
+.main-title{
+  font-family:"KaiTi","STKaiti",serif;
+  font-size:clamp(22px,6.4vw,31px);
+  font-weight:bold;
+  letter-spacing:.22em;
+  background:var(--gold-grad);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 2px 3px rgba(0,0,0,.75)) drop-shadow(0 0 18px rgba(217,164,65,.35));
+  animation:breathe 5.5s ease-in-out infinite;
+  display:inline-block;
+}
+.title-rule{
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(217,164,65,.75),transparent);
+  margin-top:7px;
+  opacity:.9;
+}
+.sub-title{
+  font-size:clamp(10.5px,2.9vw,12px);
+  color:rgba(255,248,230,.88);
+  letter-spacing:.16em;
+  margin-top:6px;
+  text-shadow:0 1px 5px rgba(0,0,0,.8);
+}
+@keyframes breathe{0%,100%{transform:scale(1);}50%{transform:scale(1.025);}}
+@keyframes fade-slide-in{
+  0%{opacity:0;transform:translateY(-10px);}
+  100%{opacity:1;transform:translateY(0);}
+}
+
+/* ============ 中间：六章信息板 ============ */
+.mid-area{
+  flex:1;
+  position:relative;
+  min-height:0;
+}
+.info-card{
+  position:absolute;
+  left:50%;top:44%;
+  transform:translate(-50%,-50%);
+  width:min(272px,74%);
+  background:linear-gradient(180deg,rgba(24,17,11,.94),rgba(24,17,11,.88));
+  border:1px solid rgba(240,208,128,.55);
+  border-top:2px solid rgba(240,208,128,.85);
+  box-shadow:0 14px 38px rgba(0,0,0,.5), 0 0 0 1px rgba(0,0,0,.3), 0 0 30px rgba(217,164,65,.1);
+  padding:16px 15px 14px;
+  z-index:6;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .45s ease;
+}
+.info-card.open{
+  opacity:1;
+  pointer-events:auto;
+  animation:card-fade .6s ease forwards;
+}
+.card-close{
+  position:absolute;top:-9px;right:-9px;
+  width:26px;height:26px;border-radius:50%;
+  background:var(--vermilion-grad);
+  color:#F6EAD2;
+  border:1px solid rgba(243,229,200,.5);
+  font-size:14px;line-height:1;cursor:pointer;
+  font-family:serif;
+  box-shadow:0 2px 8px rgba(0,0,0,.35);
+  z-index:7;
+}
+.card-close:active{transform:scale(.9);}
+@keyframes card-fade{
+  0%{opacity:0;transform:translate(-50%,-44%) translateY(14px);filter:blur(6px);}
+  100%{opacity:1;transform:translate(-50%,-50%);filter:blur(0);}
+}
+.ch-head{
+  display:flex;align-items:center;justify-content:center;gap:9px;
+  margin-bottom:10px;
+}
+.ch-seal{
+  width:32px;height:32px;
+  background:var(--vermilion-grad);
+  color:#F3E5C8;
+  font-size:15px;font-weight:bold;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:4px;
+  box-shadow:0 2px 10px rgba(195,39,43,.45), inset 0 0 0 1.5px rgba(243,229,200,.3);
+  transform:rotate(-6deg);
+  font-family:"KaiTi","STKaiti",serif;
+}
+.ch-stage{
+  font-size:10px;
+  letter-spacing:.32em;
+  color:rgba(240,208,128,.85);
+  text-shadow:0 1px 3px rgba(0,0,0,.7);
+  font-style:italic;
+}
+.ch-main{
+  font-family:"KaiTi","STKaiti",serif;
+  font-size:clamp(16px,4.6vw,19px);
+  font-weight:bold;
+  letter-spacing:.16em;
+  background:var(--gold-grad);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 1px 3px rgba(0,0,0,.7));
+  margin-bottom:8px;
+  text-align:center;
+}
+.ch-body{
+  font-size:11.5px;
+  color:rgba(255,252,242,.98);
+  line-height:1.95;
+  text-align:justify;
+  text-indent:2em;
+  text-shadow:0 1px 3px rgba(0,0,0,.7);
+  letter-spacing:.04em;
+}
+.ch-body .dot{
+  display:block;text-indent:0;text-align:center;
+  color:rgba(240,208,128,.6);
+  letter-spacing:.5em;
+  margin-top:2px;
+}
+
+/* 右侧题语 */
+.right-quote{
+  position:absolute;right:14px;top:50%;transform:translateY(-50%);
+  writing-mode:vertical-rl;
+  font-family:"KaiTi","STKaiti",serif;
+  font-size:clamp(11.5px,3.1vw,13.5px);
+  letter-spacing:.3em;
+  color:rgba(255,248,230,.96);
+  text-shadow:0 1px 8px rgba(0,0,0,.85);
+  padding-right:4px;
+  border-right:1px solid rgba(217,164,65,.6);
+  opacity:0;
+  z-index:6;
+}
+.right-quote.fade-in{animation:fade-in 1.1s ease .5s forwards;}
+@keyframes fade-in{from{opacity:0;}to{opacity:1;}}
+
+/* ============ 底部 ============ */
+.bottom-area{
+  display:flex;flex-direction:column;gap:7px;
+  padding-bottom:4px;
+  flex-shrink:0;
+  opacity:0;
+}
+.bottom-area.fade-in{animation:fade-slide-up 1s ease forwards;}
+@keyframes fade-slide-up{
+  0%{opacity:0;transform:translateY(20px);}
+  100%{opacity:1;transform:translateY(0);}
+}
+.notes-strip{
+  display:flex;gap:7px;overflow-x:auto;
+  height:44px;
+  align-items:center;
+  scrollbar-width:thin;
+  padding:0 2px;
+}
+.notes-strip::-webkit-scrollbar{height:2px;}
+.notes-strip::-webkit-scrollbar-thumb{background:rgba(139,111,71,.35);border-radius:1px;}
+.note-chip{
+  flex-shrink:0;
+  position:relative;
+  padding:5px 22px 5px 9px;
+  background:linear-gradient(180deg,rgba(247,240,224,.96),rgba(237,228,204,.94));
+  border-left:2.5px solid var(--vermilion);
+  box-shadow:0 2px 8px rgba(0,0,0,.25);
+  font-size:11px;letter-spacing:.08em;
+  color:var(--ink-light);font-weight:bold;
+  white-space:nowrap;
+  opacity:0;
+  transition:all .8s ease;
+}
+.note-chip.fallen{opacity:1;animation:ink-drop .9s ease forwards;}
+.note-del{
+  position:absolute;top:2px;right:3px;
+  width:14px;height:14px;
+  background:rgba(195,39,43,.82);
+  color:#fff;
+  border:none;border-radius:50%;
+  font-size:10px;line-height:1;
+  cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  padding:0;
+  transition:all .2s;
+}
+.note-del:active{transform:scale(.9);background:var(--vermilion-deep);}
+@keyframes ink-drop{
+  0%{opacity:0;filter:blur(6px);transform:translateY(-4px);}
+  100%{opacity:1;filter:blur(0);transform:translateY(0);}
+}
+.notes-empty{
+  font-size:11px;color:rgba(255,248,230,.72);
+  letter-spacing:.12em;
+  text-shadow:0 1px 4px rgba(0,0,0,.75);
+}
+
+/* 六章锚点 */
+.anchor-row{
+  display:flex;justify-content:center;align-items:center;gap:11px;
+  padding:0 4px;
+}
+.anchor-btn{
+  width:34px;height:34px;
+  background:rgba(245,239,224,.13);
+  border:1.5px solid rgba(240,208,128,.5);
+  color:rgba(240,208,128,.9);
+  font-family:"KaiTi","STKaiti",serif;
+  font-size:15px;font-weight:bold;
+  border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;
+  transition:all .25s;
+  box-shadow:0 2px 8px rgba(0,0,0,.3);
+  text-shadow:0 1px 3px rgba(0,0,0,.6);
+}
+.anchor-btn:active{transform:scale(.93);}
+.anchor-btn.active{
+  background:var(--vermilion-grad);
+  border-color:var(--gold-light);
+  color:#F6EAD2;
+  transform:scale(1.08);
+  box-shadow:0 0 16px rgba(195,39,43,.55), inset 0 0 0 1px rgba(243,229,200,.25);
+}
+
+.sign-row{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  color:#fff;
+  text-shadow:0 2px 8px rgba(0,0,0,.9);
+  padding-top:3px;
+  border-top:1px solid rgba(217,164,65,.35);
+}
+.sign-left{
+  font-family:"KaiTi","STKaiti",serif;
+  font-size:clamp(15px,4.2vw,19px);
+  letter-spacing:.22em;
+  font-weight:bold;
+  background:var(--gold-grad);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 2px 3px rgba(0,0,0,.7));
+  animation:breathe 6s ease-in-out infinite;
+}
+.sign-right{
+  font-size:clamp(9px,2.5vw,10.5px);
+  letter-spacing:.1em;opacity:.8;margin-top:3px;
+}
+.checkin-btn{
+  padding:7px 13px;
+  background:var(--vermilion-grad);
+  color:#F6EAD2;
+  border:1px solid rgba(243,229,200,.4);
+  font-family:"KaiTi","STKaiti",serif;
+  font-size:clamp(10.5px,2.9vw,12.5px);
+  letter-spacing:.2em;
+  cursor:pointer;
+  font-weight:bold;
+  box-shadow:0 4px 14px rgba(195,39,43,.5), inset 0 0 0 1px rgba(243,229,200,.18);
+  transition:all .2s;
+  border-radius:16px;
+  white-space:nowrap;
+}
+.checkin-btn:active{transform:scale(.95);box-shadow:0 2px 8px rgba(195,39,43,.4);}
+
+/* 水滴 */
+.rain-drop{
+  position:absolute;top:-20px;
+  width:5px;height:12px;
+  background:linear-gradient(180deg,rgba(255,255,255,.9),rgba(180,210,255,.7));
+  border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;
+  z-index:50;pointer-events:none;
+  animation:drop-fall 2s ease-in forwards;
+  box-shadow:0 0 6px rgba(180,210,255,.5);
+}
+@keyframes drop-fall{
+  0%{transform:translateY(0) scaleY(1);opacity:1;}
+  80%{opacity:1;}
+  100%{transform:translateY(100vh) scaleY(.5);opacity:0;}
+}
+
+/* ============ 书写弹窗（正面居中 · 实底清晰） ============ */
+.checkin-overlay{
+  position:absolute;inset:0;z-index:200;
+  background:rgba(8,6,4,.9);
+  display:none;align-items:center;justify-content:center;
+  padding:22px;
+}
+.checkin-overlay.show{display:flex;}
+.checkin-card{
+  background:linear-gradient(180deg,#F8F1E2 0%,#F1E8D4 60%,#E8DCC3 100%);
+  background-color:#F4EBD8;
+  width:min(92vw,330px);
+  max-height:80%;
+  overflow-y:auto;
+  padding:24px 22px 20px;
+  text-align:center;
+  border-radius:16px;
+  box-shadow:0 24px 64px rgba(0,0,0,.7), 0 0 0 1px rgba(184,134,46,.6), 0 0 0 4px rgba(184,134,46,.14);
+  position:relative;
+  animation:card-pop .5s cubic-bezier(.34,1.3,.64,1);
+  background-image:
+    radial-gradient(circle at 18% 24%, rgba(184,134,46,.08) 0 1px, transparent 1.4px),
+    radial-gradient(circle at 72% 58%, rgba(107,91,72,.07) 0 1px, transparent 1.4px),
+    radial-gradient(circle at 45% 82%, rgba(195,39,43,.06) 0 1px, transparent 1.4px);
+  background-size:14px 14px;
+}
+.checkin-card::-webkit-scrollbar{width:0;height:0;}
+@keyframes card-pop{
+  0%{opacity:0;transform:scale(.86) translateY(16px);}
+  100%{opacity:1;transform:scale(1) translateY(0);}
+}
+.card-topline{
+  position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:56px;height:4px;border-radius:2px;
+  background:rgba(184,134,46,.65);
+}
+.card-seal{
+  position:absolute;top:10px;right:12px;
+  width:40px;height:40px;
+  background:var(--vermilion-grad);
+  color:#F3E5C8;
+  display:flex;align-items:center;justify-content:center;
+  font-size:9.5px;line-height:1.25;text-align:center;
+  border-radius:4px;transform:rotate(-8deg);
+  box-shadow:0 3px 10px rgba(195,39,43,.4), inset 0 0 0 1.5px rgba(243,229,200,.3);
+  font-weight:bold;
+}
+.close-btn{
+  position:absolute;top:3px;left:10px;
+  background:none;border:none;font-size:20px;
+  color:var(--ink-light);cursor:pointer;
+  font-family:serif;line-height:1;
+}
+.card-top-seal{
+  width:30px;height:30px;margin:0 auto 8px;
+  background:var(--vermilion-grad);
+  color:#F3E5C8;
+  font-size:14px;font-weight:bold;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:3px;
+  transform:rotate(-6deg);
+  box-shadow:0 2px 8px rgba(195,39,43,.35);
+}
+.write-title{
+  font-family:"KaiTi","STKaiti",serif;
+  font-size:clamp(17px,4.8vw,21px);
+  font-weight:bold;
+  letter-spacing:.14em;
+  color:#2A241E;
+  margin-bottom:5px;
+  position:relative;
+  display:inline-block;
+  text-shadow:0 1px 0 rgba(255,255,255,.35);
+}
+.write-title::after{
+  content:"";display:block;
+  height:2px;width:56%;
+  margin:7px auto 0;
+  background:linear-gradient(90deg,transparent,var(--gold-deep),transparent);
+}
+.write-sub{
+  font-size:11px;color:#4E4130;
+  letter-spacing:.1em;
+  margin:11px 0 15px;
+}
+.write-input{
+  width:100%;
+  height:78px;
+  background:#FFFFFF;
+  border:1px solid rgba(184,134,46,.5);
+  border-top:none;border-left:none;border-right:none;
+  border-bottom:1.5px solid rgba(195,39,43,.5);
+  box-shadow:inset 0 6px 10px -8px rgba(139,111,71,.45);
+  font-family:"KaiTi","STKaiti",serif;
+  font-size:14px;color:#1C1610;
+  padding:12px 10px 8px;
+  resize:none;
+  outline:none;
+  line-height:1.9;
+}
+.write-input::placeholder{color:#8A7A5F;opacity:1;}
+.write-input:focus{border-bottom-color:var(--gold-deep);box-shadow:inset 0 6px 10px -8px rgba(139,111,71,.4), 0 8px 18px -14px rgba(217,164,65,.5);}
+.preset-row{
+  display:flex;align-items:center;justify-content:center;
+  gap:10px;margin-top:13px;
+}
+.preset-btn{
+  background:none;border:1px dashed rgba(150,105,45,.8);
+  color:#4E4130;
+  font-family:"KaiTi","STKaiti",serif;
+  font-size:11px;
+  padding:4px 12px;
+  border-radius:13px;
+  cursor:pointer;
+  letter-spacing:.06em;
+  transition:all .2s;
+}
+.preset-btn:active{background:rgba(217,164,65,.16);transform:scale(.96);}
+.write-submit{
+  margin-top:16px;
+  width:100%;
+  padding:11px 0;
+  background:var(--vermilion-grad);
+  color:#F6EAD2;
+  border:1px solid rgba(243,229,200,.35);
+  font-family:"KaiTi","STKaiti",serif;
+  font-size:15px;
+  letter-spacing:.34em;
+  cursor:pointer;
+  font-weight:bold;
+  box-shadow:0 5px 16px rgba(195,39,43,.48), inset 0 0 0 1px rgba(243,229,200,.16);
+  transition:all .2s;
+  position:relative;
+}
+.write-submit::after{
+  content:"跋";
+  position:absolute;right:12px;top:50%;transform:translateY(-50%) rotate(-10deg);
+  width:22px;height:22px;
+  background:rgba(243,229,200,.22);
+  color:#F6EAD2;
+  font-size:11px;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:2px;
+}
+.write-submit:active{transform:scale(.97);box-shadow:0 3px 10px rgba(195,39,43,.4);}
+
+/* 成功态：题跋+话术+分享 */
+.write-ok{display:none;padding:14px 2px 6px;}
+.write-ok.show{display:block;animation:fade-in .7s ease;}
+.ok-big{
+  font-family:"KaiTi","STKaiti",serif;
+  font-size:clamp(19px,5.2vw,23px);
+  font-weight:bold;
+  letter-spacing:.2em;
+  color:#2A241E;
+  text-shadow:0 1px 0 rgba(255,255,255,.4);
+  margin-bottom:10px;
+}
+.ok-my-text{
+  margin:0 auto 12px;
+  max-height:110px;overflow:hidden;
+  padding:8px 12px;
+  background:#FFFDF6;
+  border-left:2.5px solid var(--vermilion);
+  font-size:13.5px;color:#201A12;
+  font-family:"KaiTi","STKaiti",serif;
+  letter-spacing:.06em;
+  text-align:left;
+  line-height:1.85;
+}
+.ok-label{
+  font-size:10px;letter-spacing:.3em;
+  color:#5C4E3A;
+  margin-bottom:7px;
+  font-style:italic;
+}
+.ok-advice{
+  padding:11px 14px;
+  background:linear-gradient(180deg,rgba(217,164,65,.25),rgba(184,134,46,.14));
+  border:1px solid rgba(184,134,46,.6);
+  border-left:3px solid var(--gold-deep);
+  font-size:14px;color:#241D12;
+  font-family:"KaiTi","STKaiti",serif;
+  line-height:2.05;
+  letter-spacing:.05em;
+  text-align:left;
+  text-indent:2em;
+  margin-bottom:14px;
+}
+.share-btn{
+  margin-top:2px;
+  width:100%;
+  padding:10px 0;
+  background:linear-gradient(135deg,#3A342C,#2B2520);
+  color:var(--gold-light);
+  border:1px solid rgba(217,164,65,.6);
+  font-family:"KaiTi","STKaiti",serif;
+  font-size:14px;
+  letter-spacing:.28em;
+  cursor:pointer;
+  font-weight:bold;
+  transition:all .2s;
+  box-shadow:0 4px 14px rgba(0,0,0,.35);
+}
+.share-btn:active{transform:scale(.97);}
+
+/* 分享卡片弹层 */
+.share-overlay{
+  position:absolute;inset:0;z-index:300;
+  background:rgba(12,9,6,.93);
+  display:none;align-items:center;justify-content:center;
+  flex-direction:column;gap:14px;
+  padding:20px;
+}
+.share-overlay.show{display:flex;}
+.share-panel{
+  background:linear-gradient(180deg,#F8F2E4 0%,#F1E9D4 70%,#E9DFC6 100%);
+  width:min(92vw,342px);
+  padding:16px;
+  box-shadow:0 24px 64px rgba(0,0,0,.6), 0 0 0 1px rgba(184,134,46,.5);
+  position:relative;
+  animation:card-in .5s ease;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(184,134,46,.06) 0 1px, transparent 1.4px),
+    radial-gradient(circle at 70% 65%, rgba(107,91,72,.05) 0 1px, transparent 1.4px);
+  background-size:14px 14px;
+}
+.share-title-row{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:10px;
+}
+.share-title{
+  font-family:"KaiTi","STKaiti",serif;
+  font-size:16px;font-weight:bold;color:var(--ink);
+  letter-spacing:.18em;
+}
+.share-close{
+  background:none;border:none;font-size:18px;color:var(--ink-light);cursor:pointer;
+  font-family:serif;line-height:1;
+}
+.share-canvas-wrap{
+  background:#111;
+  border:1px solid rgba(184,134,46,.6);
+  line-height:0;
+}
+#shareCanvas{
+  width:100%;
+  display:block;
+}
+.share-actions{
+  display:flex;gap:10px;
+}
+.share-action{
+  flex:1;
+  padding:9px 0;
+  border:none;cursor:pointer;
+  font-family:"KaiTi","STKaiti",serif;
+  font-size:14px;font-weight:bold;
+  letter-spacing:.2em;
+  transition:all .2s;
+}
+.share-action.save{
+  background:var(--vermilion-grad);
+  color:#F6EAD2;
+  box-shadow:0 4px 12px rgba(195,39,43,.4);
+}
+.share-action.copy{
+  background:linear-gradient(135deg,#3A342C,#2B2520);
+  color:var(--gold-light);
+  border:1px solid rgba(217,164,65,.55);
+}
+.share-action:active{transform:scale(.96);}
+.share-tip{
+  font-size:10px;color:var(--ink-light);
+  letter-spacing:.12em;
+}
+.share-loading{
+  position:absolute;inset:0;z-index:5;
+  background:rgba(245,239,224,.96);
+  display:flex;align-items:center;justify-content:center;
+  font-family:"KaiTi","STKaiti",serif;
+  font-size:13px;color:var(--ink-light);
+  letter-spacing:.3em;
+}
+
+/* 装裱边 */
+.edge-left,.edge-right{position:absolute;top:0;bottom:0;width:8px;background:linear-gradient(90deg,#5C4A30,#8B6F47,#5C4A30);z-index:20;}
+.edge-left{left:0;}
+.edge-right{right:0;}
+.edge-top,.edge-bottom{position:absolute;left:0;right:0;height:8px;background:linear-gradient(180deg,#5C4A30,#8B6F47,#5C4A30);z-index:20;}
+.edge-top{top:0;}
+.edge-bottom{bottom:0;}
+
+/* ── 印章替换：统一「口旋湖草」篆印（容器保留原类名/尺寸/动画，文字→图） ── */
+.seal,.p4-seal,.p6-seal,.p7-seal,.p8-seal,.p8-seal2,.seal2,.p11-seal,.chop,
+.intro-seal,.seal-stamp,.ch-seal,.card-seal,.card-top-seal{
+  background:transparent !important;box-shadow:none !important;
+  border-color:transparent !important;color:transparent !important;
+}
+.chop::after{content:none !important}
+.seal img,.p4-seal img,.p6-seal img,.p7-seal img,.p8-seal img,.p8-seal2 img,.seal2 img,
+.p11-seal img,.chop img,.intro-seal img,.seal-stamp img,.ch-seal img,.card-seal img,
+.card-top-seal img{
+  display:block;flex:none;width:100%;height:100%;object-fit:cover;border-radius:1px;
+}
+
+/* ===== 统一顶部会展条（卷尾页 flex 行） ===== */
+.topbar-row{display:flex;align-items:center;margin-bottom:4px;flex-shrink:0;pointer-events:none}
+.topbar-row span{
+  font-family:'KaiTi','Kaiti SC','STKaiti','KaiTi',serif;
+  font-size:.72rem;font-weight:700;letter-spacing:.16em;
+  color:#3a3229;text-shadow:0 1px 6px rgba(253,247,232,.9);
+}
+.topbar-row i{display:inline-block;width:4px;height:12px;border-radius:1px;
+  background:#c43328;margin-right:8px;vertical-align:-1px}
+
+
+/* ===== 统一顶部会展条（全部页面一致） ===== */
+.top>span,.top>span.left,.topbar>span,.fest,
+.p4-topbar>span,.p6-topbar>span,.p7-topbar>span,.p8-top>span,.head .topbar,.topbar-fest>span{
+  font-family:'KaiTi','Kaiti SC','STKaiti','KaiTi',serif!important;
+  font-size:.72rem!important;font-weight:700!important;
+  letter-spacing:.16em!important;
+  color:#3a3229!important;
+  text-shadow:0 1px 6px rgba(253,247,232,.9)!important;
+  opacity:.92!important;
+}
+.top>span>i,.top>span.left>i,.topbar>span>i,.p4-topbar>span>i,
+.p6-topbar>span>i,.p7-topbar>span>i,.p8-top>span>i,.head .topbar>i,.topbar-fest>span>i{
+  display:inline-block!important;width:4px!important;height:12px!important;
+  border-radius:1px!important;background:#c43328!important;
+  margin-right:8px!important;vertical-align:-1px!important;
+  border:0!important;
+}
+.fest{border-left:0!important;padding-left:0!important}
+.topbar-fest{
+  position:absolute!important;left:22px!important;right:auto!important;top:3.2%!important;
+  z-index:50!important;height:auto!important;background:transparent!important;
+  display:flex!important;justify-content:flex-start!important;pointer-events:none!important;
+}
+.head{position:absolute!important;left:22px!important;right:auto!important;top:3.2%!important;padding:0!important}
+
+/* ===== 卷尾页动画增强（入场 + 持续） ===== */
+/* 顶部会展条：从下滑入 */
+.topbar-row{opacity:0;transform:translateY(-14px);animation:topbar-in .85s cubic-bezier(.16,1,.3,1) .5s forwards}
+@keyframes topbar-in{to{opacity:1;transform:translateY(0)}}
+/* 主印章：盖章落定后持续呼吸浮动 */
+.seal-stamp.stamp-in{animation:stamp-in 1s cubic-bezier(.34,1.56,.64,1) forwards, seal-float 4.6s ease-in-out 2.6s infinite}
+@keyframes seal-float{0%,100%{transform:scale(1) rotate(-8deg)}50%{transform:scale(1.06) rotate(-4.5deg)}}
+/* 落笔按钮：光晕脉冲 */
+.checkin-btn{position:relative}
+.checkin-btn::after{content:'';position:absolute;inset:-5px;border-radius:18px;
+  box-shadow:0 0 0 0 rgba(195,39,43,.5);animation:btn-pulse 2.4s ease-out infinite;pointer-events:none}
+@keyframes btn-pulse{0%{box-shadow:0 0 0 0 rgba(195,39,43,.5)}60%{box-shadow:0 0 0 9px rgba(195,39,43,0)}100%{box-shadow:0 0 0 0 rgba(195,39,43,0)}}
+/* 副标题：微光呼吸 */
+.sub-title{animation:sub-glow 3.6s ease-in-out 3.2s infinite}
+@keyframes sub-glow{0%,100%{opacity:.88}50%{opacity:1;text-shadow:0 0 12px rgba(232,217,181,.95)}}
+/* 签行：轻微浮动 */
+.sign-left{animation:sign-breathe 4.2s ease-in-out 3.4s infinite}
+@keyframes sign-breathe{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+
+/* ═══ 卷尾素材致谢一行小字 ═══ */
+.credit-line{margin-top:6px;text-align:center;font-size:.5rem;letter-spacing:.14em;
+  color:rgba(58,50,41,.55);pointer-events:none}

@@ -1,0 +1,138 @@
+/* shell.css —— 外层甲板：13 页各自独立 iframe，垂直滑行翻页 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{
+  background:#d9cdb4;
+  overflow:hidden;
+  -webkit-tap-highlight-color:transparent;
+  font-family:'LXGW WenKai','Kaiti SC','STKaiti','KaiTi','SimSun',serif;
+}
+#stage{position:fixed;inset:0;overflow:hidden;touch-action:none}
+#deck{width:100%;will-change:transform}
+#deck .slot{position:relative;width:100%;overflow:hidden;touch-action:none;
+  background:#d9cdb4}   /* 与页面同底色，翻页空隙不露白、不闪色 */
+#deck .slot iframe{
+  display:block;width:100%;height:100%;
+  border:0;background:transparent;touch-action:none;
+}
+
+/* ---------- 首屏加载动画 ---------- */
+#boot{
+  position:fixed;inset:0;z-index:200;
+  background:#d9cdb4;
+  display:flex;align-items:center;justify-content:center;
+  transition:opacity .6s ease;
+}
+#boot.hide{opacity:0;pointer-events:none}
+.boot-inner{
+  display:flex;flex-direction:column;align-items:center;gap:16px;
+  animation:bootIn .9s ease-out both;
+}
+@keyframes bootIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.boot-ring{
+  width:76px;height:76px;border-radius:50%;
+  border:3px solid rgba(140,50,35,.16);
+  border-top-color:rgba(140,50,35,.9);
+  border-right-color:rgba(140,50,35,.5);
+  animation:bootSpin 1.1s linear infinite;
+}
+@keyframes bootSpin{to{transform:rotate(360deg)}}
+.boot-logo{
+  font-size:26px;font-weight:700;letter-spacing:.38em;text-indent:.38em;
+  color:#4a3728;
+  font-family:'LXGW WenKai','Kaiti SC','STKaiti','KaiTi',serif;
+  animation:bootBreath 1.8s ease-in-out infinite;
+}
+@keyframes bootBreath{0%,100%{opacity:.5}50%{opacity:1}}
+.boot-sub{
+  font-size:12px;letter-spacing:.32em;text-indent:.32em;
+  color:rgba(58,50,41,.62);
+  animation:bootIn 1.1s ease-out .25s both;
+}
+
+/* 右侧点阵 */
+.dots{
+  position:fixed;right:10px;top:50%;transform:translateY(-50%);
+  z-index:50;display:flex;flex-direction:column;gap:7px;
+  pointer-events:none;
+}
+.dots i{
+  width:6px;height:6px;border-radius:50%;
+  background:rgba(36,31,24,.22);
+  pointer-events:auto;cursor:pointer;
+  transition:background .3s,transform .3s;
+}
+.dots i.on{background:rgba(140,50,35,.85);transform:scale(1.45)}
+
+/* 底部导航按钮 */
+.nav{
+  position:fixed;left:50%;bottom:16px;transform:translateX(-50%) translateY(30px);
+  z-index:50;opacity:0;transition:opacity .6s,transform .6s;
+  pointer-events:none;
+}
+.nav.show{opacity:1;transform:translateX(-50%) translateY(0);pointer-events:auto}
+#nextBtn{
+  width:44px;height:44px;border-radius:50%;
+  border:1px solid rgba(36,31,24,.28);
+  background:rgba(247,240,225,.82);
+  color:rgba(36,31,24,.75);
+  font-size:20px;line-height:1;
+  cursor:pointer;
+  box-shadow:0 2px 10px rgba(70,45,25,.18);
+  -webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);
+  transition:background .3s,color .3s;
+}
+#nextBtn:active{background:rgba(140,50,35,.9);color:#f7efe2}
+
+/* 上滑提示 */
+.hint{
+  position:fixed;left:50%;bottom:22px;transform:translateX(-50%);
+  z-index:49;
+  font-size:12px;font-weight:600;letter-spacing:.3em;text-indent:.3em;
+  color:rgba(58,50,41,.72);
+  transition:opacity .5s;
+  pointer-events:none;
+  text-shadow:0 1px 6px rgba(239,228,205,.8);
+}
+.hint.hide{opacity:0}
+
+/* ---------- 声音钮（左下角，与 #nextBtn 同语言） ---------- */
+#sndBtn{
+  position:fixed;left:16px;bottom:16px;z-index:60;
+  width:44px;height:44px;border-radius:50%;
+  border:1px solid rgba(36,31,24,.28);
+  background:rgba(247,240,225,.82);
+  color:rgba(36,31,24,.72);
+  display:flex;align-items:flex-end;justify-content:center;gap:2.5px;
+  padding-bottom:19px;
+  cursor:pointer;
+  box-shadow:0 2px 10px rgba(70,45,25,.18);
+  -webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);
+  transition:background .3s,border-color .3s;
+}
+#sndBtn:active{background:rgba(140,50,35,.9);color:#f7efe2}
+#sndBtn .bar{display:block;width:2.5px;border-radius:1px;background:currentColor;
+  transform-origin:bottom;height:7px;transition:opacity .3s}
+#sndBtn .b1{height:7px}  #sndBtn .b2{height:13px}  #sndBtn .b3{height:9px}
+#sndBtn .lab{position:absolute;left:0;right:0;bottom:5px;text-align:center;
+  font-size:8px;letter-spacing:.08em;color:currentColor;opacity:.5;line-height:1}
+#sndBtn.playing .b1{animation:eqA .86s ease-in-out infinite}
+#sndBtn.playing .b2{animation:eqB .68s ease-in-out infinite}
+#sndBtn.playing .b3{animation:eqC .78s ease-in-out infinite}
+@keyframes eqA{0%,100%{height:5px}50%{height:13px}}
+@keyframes eqB{0%,100%{height:14px}50%{height:6px}}
+@keyframes eqC{0%,100%{height:9px}50%{height:15px}}
+#sndBtn .slash{display:none;position:absolute;left:50%;top:50%;width:1.5px;height:26px;
+  background:rgba(140,50,35,.8);transform:translate(-50%,-50%) rotate(45deg);border-radius:1px}
+#sndBtn.off .slash{display:block}
+#sndBtn.off .bar{opacity:.3}
+#sndBtn.nudge::after{
+  content:'';position:absolute;inset:-7px;border-radius:50%;
+  border:1px solid rgba(140,50,35,.55);
+  animation:nudgeRing 2.2s ease-out infinite;
+}
+@keyframes nudgeRing{
+  0%{transform:scale(.86);opacity:0}
+  35%{opacity:.9}
+  100%{transform:scale(1.25);opacity:0}
+}

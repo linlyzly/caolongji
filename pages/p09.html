@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>隔水 · 蛰伏</title>
+<link rel="stylesheet" href="../css/p09.css?v=2026102045">
+</head><body>
+
+<div class="page phase0" id="page">
+  <header class="topbar-fest"><span><i class="bar"></i>鄱阳湖绿色非遗会展季 · 2026</span></header>
+  <img class="bg" id="bgEmpty" src="../img/p09_27.jpg" alt=""/>
+  <img class="bg" id="bgDragon" src="../img/p09_28.jpg" alt=""/>
+  <!-- 夜色压暗层 -->
+  <div id="night"></div>
+  <!-- 云朵呼吸提示 -->
+  <div class="clue" style="left:27%;top:15%"></div>
+  <div class="clue" style="left:64%;top:10%"></div>
+  <!-- 夜空光点 -->
+  <div class="firefly" style="left:18%;top:20%"></div>
+  <div class="firefly" style="left:76%;top:16%;animation-delay:2.6s"></div>
+  <div class="firefly" style="left:48%;top:24%;animation-delay:5.2s"></div>
+  <!-- 主题标题 -->
+  <div id="title"><span class="t1">蛰伏</span></div>
+  <!-- 题眼(竖排两列) -->
+  <div class="verse">
+    <span class="v v2">等雨。它不着急。</span>
+    <span class="v">草龙卧在稻浪里</span>
+  </div>
+  <!-- 右上角方章 -->
+  <div class="chop"><img src="../img/stamp.png" alt=""></div>
+  <!-- 稻穗剪影(右侧) -->
+  <svg class="ear" style="right:12px;bottom:30px;width:74px;height:130px;transform:scaleX(-1);opacity:.32" viewBox="0 0 60 120" fill="none" stroke="rgba(201,164,95,.9)" stroke-width="1.6" stroke-linecap="round">
+    <path d="M8 118 C8 84, 16 54, 30 26"/>
+    <path d="M14 104 C22 100, 26 94, 28 86" stroke-width="1.2"/>
+    <path d="M18 90 C26 87, 30 80, 32 72" stroke-width="1.2"/>
+    <path d="M22 74 C29 71, 33 65, 35 57" stroke-width="1.2"/>
+    <path d="M26 58 C32 55, 35 49, 37 41" stroke-width="1.2"/>
+  </svg>
+  <!-- 竖排小字 -->
+  <div class="kicker">秋收之后 · 丰年之前</div>
+  <!-- 底部信息组 -->
+  <div id="footNote">
+    <div class="line"></div>
+    <div class="lineTxt">龙已扎成 · 只待雨至</div>
+    <div id="guide"><span class="txt">轻点夜空 · 唤一场雨来</span><div class="dot"></div></div>
+  </div>
+  <!-- 雨 -->
+  <canvas id="rain"></canvas>
+  <!-- 弹窗 -->
+  <div id="mask"></div>
+  <div id="panel">
+    <div class="popTag">写给每一个等雨的人</div>
+    <div class="hTitle">不是认命，<br/>是在等一场属于自己的雨。</div>
+    <div class="btn" id="closeBtn">收 下</div>
+  </div>
+  <!-- 下滑指示 -->
+  <div id="scrollHint">向上滑动</div>
+  <!-- 知识卡(翻页) -->
+  <div class="infoCard" id="infoCard">
+    <div class="icTop"><span class="icTag" id="icTag"></span><span class="icPg" id="icPg"></span></div>
+    <div class="icBody" id="icBody"></div>
+    <div class="icNav">
+      <div class="arrow" id="icPrev">‹</div>
+      <span class="icHint">轻触翻页 · 一页一知</span>
+      <div class="arrow" id="icNext">›</div>
+    </div>
+  </div>
+</div>
+
+
+<script src="../js/p09.js?v=2026102045"></script>
+<script src="../js/bridge.js?v=2026102045"></script>
+</body></html>
